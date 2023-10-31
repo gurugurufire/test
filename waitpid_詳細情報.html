@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>waitpid関数の詳細情報</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1, h2 { color: #333366; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>waitpid</h1>
+    <h2>プロトタイプ</h2>
+    <p>pid_t waitpid(pid_t pid, int *status, int options);</p>
+    <h2>詳細説明</h2>
+    <p>waitpid関数は、指定されたpidの子プロセスの終了を待ちます。optionsを使用して挙動を変更できます。子プロセスが終了すると、そのプロセスIDが返され、statusポインタが終了情報で更新されます。</p>
+    <h2>使用例</h2>
+    <h3>コード</h3>
+    <pre>
+#include &lt;sys/wait.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;unistd.h&gt;
+
+int main() {
+    pid_t pid = fork();
+    if (pid == 0) {
+        // 子プロセス
+        printf("子プロセス: PID = %d\n", getpid());
+    } else {
+        // 親プロセス
+        int status;
+        pid_t childPid = waitpid(pid, &status, 0);
+        printf("親プロセス: 子プロセス %d が終了しました\n", childPid);
+    }
+    return 0;
+}
+    </pre>
+    <h3>出力</h3>
+    <pre>
+子プロセス: PID = [子プロセスのPID]
+親プロセス: 子プロセス [子プロセスのPID] が終了しました
+    </pre>
+</body>
+</html>
