@@ -1,545 +1,657 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>関数リンク一覧</title>
+    <title>関数図鑑</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 20px; }
         table { border-collapse: collapse; width: 100%; }
         th, td { border: 1px solid #dddddd; text-align: left; padding: 8px; }
         th { background-color: #f2f2f2; }
-        tr:nth-child(even) { background-color: #f9f9f9; }
     </style>
 </head>
 <body>
-    <h1>関数リンク一覧</h1>
-    <table>
-        <tr>
-            <th>関数名</th>
-            <th>プロトタイプ</th>
-            <th>説明</th>
-            <th>リンク</th>
-        </tr>
-
-        <tr>
-            <td>abort関数の詳細情報</td>
-            <td>void abort(void);</td>
-            <td>abort関数は、異常終了のシグナル (SIGABRT) を生成し、デフォルトのシグナルハンドラが呼び出されることでプログラムを終了させます。</td>
-            <td><a href="/function_pages/function_pages/abort_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>aligned_alloc関数の詳細情報</td>
-            <td>void* aligned_alloc(size_t alignment, size_t size);</td>
-            <td>aligned_alloc関数は、指定されたアライメントで指定されたサイズのメモリブロックを割り当てる関数です。成功するとアライメントされたメモリブロックへのポインタを返し、失敗するとNULLを返します。</td>
-            <td><a href="/function_pages/function_pages/aligned_alloc_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>asctime関数の詳細情報</td>
-            <td>char *asctime(const struct tm *timeptr);</td>
-            <td>asctime関数は、指定されたstruct tm構造体を人間が読める文字列に変換します。この文字列は、曜日、月、日、時、分、秒、および年を表します。</td>
-            <td><a href="/function_pages/function_pages/asctime_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>assert関数の詳細情報</td>
-            <td>void assert(int expression);</td>
-            <td>assertマクロは、指定された式が真であることを確認します。式が偽である場合、assertはエラーメッセージを表示し、プログラムを異常終了させます。</td>
-            <td><a href="/function_pages/function_pages/assert_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>atexit関数の詳細情報</td>
-            <td>int atexit(void (*func)(void));</td>
-            <td>atexit関数は、プログラムが正常に終了するときに実行される関数を登録するために使用されます。登録された関数は逆順で実行されます。</td>
-            <td><a href="/function_pages/function_pages/atexit_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>atof関数の詳細情報</td>
-            <td>double atof(const char *str);</td>
-            <td>atof関数は、文字列をdouble型の浮動小数点数に変換します。変換できない場合は0.0を返します。</td>
-            <td><a href="/function_pages/function_pages/atof_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>atoi関数の詳細情報</td>
-            <td>int atoi(const char *str);</td>
-            <td>atoi関数は、文字列をint型の整数に変換します。変換できない場合は0を返します。</td>
-            <td><a href="/function_pages/function_pages/atoi_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>atol関数の詳細情報</td>
-            <td>long atol(const char *str);</td>
-            <td>atol関数は、文字列をlong型の整数に変換します。変換できない場合は0を返します。</td>
-            <td><a href="/function_pages/function_pages/atol_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>calloc関数の詳細情報</td>
-            <td>void *calloc(size_t num, size_t size);</td>
-            <td>calloc関数は、指定された数の要素に対して動的にメモリを割り当て、割り当てられたメモリを0で初期化します。成功すると、割り当てられたメモリへのポインタを返し、失敗するとNULLを返します。</td>
-            <td><a href="/function_pages/function_pages/calloc_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>ceil関数の詳細情報</td>
-            <td>double ceil(double x);</td>
-            <td>ceil関数は、引数として与えられた浮動小数点数xを超えない最小の整数を返します。この関数は<math.h>ヘッダーに定義されています。</td>
-            <td><a href="/function_pages/function_pages/ceil_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>clock関数の詳細情報</td>
-            <td>clock_t clock(void);</td>
-            <td>clock関数は、プログラムの開始からの処理時間（CPU時間）を測定するために使用されます。この関数は<time.h>ヘッダーに定義されています。返り値はclock_t型で、時間を表す値です。</td>
-            <td><a href="/function_pages/function_pages/clock_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>cos関数の詳細情報</td>
-            <td>double cos(double x);</td>
-            <td>cos関数は、引数として与えられた角度（ラジアン単位）の余弦（コサイン）を計算します。この関数は<math.h>ヘッダーに定義されています。</td>
-            <td><a href="/function_pages/function_pages/cos_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>ctime関数の詳細情報</td>
-            <td>char *ctime(const time_t *timer);</td>
-            <td>ctime関数は、time_t型の値を受け取り、それを読みやすい文字列の形式に変換します。この関数は<time.h>ヘッダーに定義されています。</td>
-            <td><a href="/function_pages/function_pages/ctime_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>difftime関数の詳細情報</td>
-            <td>double difftime(time_t time2, time_t time1);</td>
-            <td>difftime関数は、2つのtime_t型の値（time2およびtime1）間の時間差（秒単位）を計算します。この関数は<time.h>ヘッダーに定義されています。</td>
-            <td><a href="/function_pages/function_pages/difftime_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>errnoの詳細情報</td>
-            <td></td>
-            <td></td>
-            <td><a href="/function_pages/function_pages/errno_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>exec関数群の詳細情報</td>
-            <td>int execl(const char *path, const char *arg, ...);</td>
-            <td>exec関数群は、現在のプロセスを新しいプログラムで置き換えるために使用されます。これらの関数は成功すると戻りません。失敗した場合には-1を返し、errnoがセットされます。</td>
-            <td><a href="/function_pages/function_pages/exec_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>exit関数の詳細情報</td>
-            <td>void exit(int status);</td>
-            <td>exit関数は、プログラムの実行を終了し、制御をオペレーティングシステムに戻します。status引数は、プログラムの終了状態を表し、これはオペレーティングシステムや他のプログラムによって使用されることがあります。</td>
-            <td><a href="/function_pages/function_pages/exit_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>exp関数の詳細情報</td>
-            <td>double exp(double x);</td>
-            <td>exp関数は、数学的なe（ネイピア数）のx乗を計算し、その結果を返します。</td>
-            <td><a href="/function_pages/function_pages/exp_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>fgets関数の詳細情報</td>
-            <td>char *fgets(char *str, int n, FILE *stream);</td>
-            <td>fgets関数は、指定されたファイルストリームから文字列を読み込み、それをstrで指定された文字列に格納します。nは読み込む最大文字数を指定し、ファイルの終端に達するか改行文字を読み込むまで文字を読み込みます。成功した場合はstrを返し、失敗した場合はNULLを返します。</td>
-            <td><a href="/function_pages/function_pages/fgets_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>floor関数の詳細情報</td>
-            <td>double floor(double x);</td>
-            <td>floor関数は、与えられた実数値x以下の最大の整数を返します。つまり、xを超えない最大の整数値を計算します。</td>
-            <td><a href="/function_pages/function_pages/floor_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>fork関数の詳細情報</td>
-            <td>pid_t fork(void);</td>
-            <td>fork関数は新しいプロセスを作成します。この関数が成功すると、2つのプロセスが存在するようになります。呼び出し元のプロセスは「親プロセス」と呼ばれ、新しいプロセスは「子プロセス」と呼ばれます。子プロセスは親プロセスのコピーであり、ほとんどの状態が同じですが、異なるプロセスIDを持っています。</td>
-            <td><a href="/function_pages/function_pages/fork_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>fprintf関数の詳細情報</td>
-            <td>int fprintf(FILE *stream, const char *format, ...);</td>
-            <td>
-        fprintf関数は、指定されたストリームに対して書式付きの出力を行います。第一引数は出力先のストリーム、第二引数は書式文字列を指定します。
-        その後の引数は、書式文字列内の書式指定子に対応する変数を順に指定します。
-    </td>
-            <td><a href="/function_pages/function_pages/fprintf_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>fputs関数の詳細情報</td>
-            <td>int fputs(const char *str, FILE *stream);</td>
-            <td>fputs関数は、指定された文字列を指定されたストリームに書き込みます。成功した場合は非負の値を、エラーが発生した場合はEOFを返します。</td>
-            <td><a href="/function_pages/function_pages/fputs_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>free関数の詳細情報</td>
-            <td>void free(void *ptr);</td>
-            <td>free関数は、mallocやcallocなどで割り当てられたメモリ領域を解放します。ptrがNULLポインタの場合、何も行われません。</td>
-            <td><a href="/function_pages/function_pages/free_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>fscanf関数の詳細情報</td>
-            <td>int fscanf(FILE *stream, const char *format, ...);</td>
-            <td>fscanf関数は、指定されたファイルストリームからフォーマットされたデータを読み取り、引数に従って変数に格納します。成功すると、読み取った項目の数を返します。失敗するとEOFを返します。</td>
-            <td><a href="/function_pages/function_pages/fscanf_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>getchar関数の詳細情報</td>
-            <td>int getchar(void);</td>
-            <td>getchar関数は、標準入力から1文字を読み取り、その文字のASCII値を返します。</td>
-            <td><a href="/function_pages/function_pages/getchar_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>getenv関数の詳細情報</td>
-            <td>char *getenv(const char *name);</td>
-            <td>getenv関数は、引数で指定された名前の環境変数の値を返します。環境変数が存在しない場合はNULLを返します。</td>
-            <td><a href="/function_pages/function_pages/getenv_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>gets関数の詳細情報</td>
-            <td>char *gets(char *str);</td>
-            <td>gets関数は、標準入力から改行文字までの文字列を読み取り、引数で指定された文字列に格納します。入力の終わりに達するか、エラーが発生するとNULLを返します。</td>
-            <td><a href="/function_pages/function_pages/gets_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>gmtime関数の詳細情報</td>
-            <td>struct tm *gmtime(const time_t *timer);</td>
-            <td>gmtime関数は、UNIXエポックからの秒数を格納したtime_t型の値を取り、それをUTCを基準としたtm構造体に変換します。この関数は変換されたtm構造体へのポインタを返します。</td>
-            <td><a href="/function_pages/function_pages/gmtime_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>isalpha関数の詳細情報</td>
-            <td>int isalpha(int c);</td>
-            <td>isalpha関数は、引数として与えられた文字がアルファベット（a-z または A-Z）であるかどうかをテストします。もしアルファベットであれば、0以外の値（真）を返し、そうでなければ0（偽）を返します。</td>
-            <td><a href="/function_pages/function_pages/isalpha_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>isdigit関数の詳細情報</td>
-            <td>int isdigit(int c);</td>
-            <td>isdigit関数は、引数として与えられた文字が数字（0-9）であるかどうかをテストします。もし数字であれば、0以外の値（真）を返し、そうでなければ0（偽）を返します。</td>
-            <td><a href="/function_pages/function_pages/isdigit_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>islower関数の詳細情報</td>
-            <td>int islower(int c);</td>
-            <td>islower関数は、引数として与えられた文字が小文字であるかどうかをテストします。もし小文字であれば、0以外の値（真）を返し、そうでなければ0（偽）を返します。</td>
-            <td><a href="/function_pages/function_pages/islower_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>isupper関数の詳細情報</td>
-            <td>int isupper(int c);</td>
-            <td>isupper関数は、引数として与えられた文字が大文字であるかどうかをテストします。もし大文字であれば、0以外の値（真）を返し、そうでなければ0（偽）を返します。</td>
-            <td><a href="/function_pages/function_pages/isupper_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>itoa関数の詳細情報</td>
-            <td>char* itoa(int value, char* str, int base);</td>
-            <td>itoa関数は、整数を文字列に変換します。第一引数は変換したい整数、第二引数は結果の文字列を格納するためのバッファ、第三引数は数値の基数です。</td>
-            <td><a href="/function_pages/function_pages/itoa_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>localeconv関数の詳細情報</td>
-            <td>struct lconv* localeconv(void);</td>
-            <td>localeconv関数は、現在のロケールの書式設定情報を含む構造体を返します。この構造体には、数値の書式、通貨の書式などの情報が含まれています。</td>
-            <td><a href="/function_pages/function_pages/localeconv_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>localtime関数の詳細情報</td>
-            <td>struct tm* localtime(const time_t* timer);</td>
-            <td>localtime関数は、time_t型のポインタを引数として受け取り、それをローカル時刻に変換したtm構造体へのポインタを返します。この構造体は、年、月、日、時、分、秒などの情報を含んでいます。</td>
-            <td><a href="/function_pages/function_pages/localtime_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>log10関数の詳細情報</td>
-            <td>double log10(double x);</td>
-            <td>log10関数は、引数として与えられた実数値xの常用対数（底は10）を計算して返します。この関数はヘッダーファイルに定義されています。</td>
-            <td><a href="/function_pages/function_pages/log10_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>log関数の詳細情報</td>
-            <td>double log(double x);</td>
-            <td>log関数は、引数として与えられた実数値xの自然対数（底はネイピア数e）を計算して返します。この関数はヘッダーファイルに定義されています。</td>
-            <td><a href="/function_pages/function_pages/log_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>malloc関数の詳細情報</td>
-            <td>void* malloc(size_t size);</td>
-            <td>malloc関数は、指定されたバイト数のメモリを割り当て、そのメモリブロックへのポインタを返します。この関数はヘッダーファイルに定義されています。</td>
-            <td><a href="/function_pages/function_pages/malloc_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>mktime関数の詳細情報</td>
-            <td>time_t mktime(struct tm *timeptr);</td>
-            <td>mktime関数は、struct tmによって指定されたローカル時刻を、time_t型のカレンダー時刻に変換します。この関数はヘッダーファイルに定義されています。</td>
-            <td><a href="/function_pages/function_pages/mktime_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>perror関数の詳細情報</td>
-            <td>void perror(const char *str);</td>
-            <td>perror関数は、errno変数に設定された最後のエラーコードに対応するエラーメッセージを標準エラー出力に出力します。オプションで、エラーメッセージの前に追加の文字列を出力するためにstrを指定することができます。</td>
-            <td><a href="/function_pages/function_pages/perror_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>pow関数の詳細情報</td>
-            <td>double pow(double base, double exponent);</td>
-            <td>pow関数は、指定された基数（base）の指定された指数（exponent）に対する累乗計算を行います。</td>
-            <td><a href="/function_pages/function_pages/pow_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>printf関数の詳細情報</td>
-            <td>int printf(const char *format, ...);</td>
-            <td>printf関数は、指定されたフォーマット文字列に従って変数を整形し、それを標準出力に出力します。</td>
-            <td><a href="/function_pages/function_pages/printf_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>putchar関数の詳細情報</td>
-            <td>int putchar(int char);</td>
-            <td>putchar関数は、指定された文字を標準出力に出力し、出力された文字を返します。</td>
-            <td><a href="/function_pages/function_pages/putchar_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>puts関数の詳細情報</td>
-            <td>int puts(const char *s);</td>
-            <td>puts関数は、指定された文字列を標準出力に出力し、改行文字を追加します。成功した場合は非負の整数を返し、エラーが発生した場合はEOFを返します。</td>
-            <td><a href="/function_pages/function_pages/puts_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>rand関数の詳細情報</td>
-            <td>int rand(void);</td>
-            <td>rand関数は、疑似乱数を生成して0からRAND_MAXまでの範囲の整数を返します。より予測不可能な乱数列を生成するために、srand関数で乱数生成器をシードすることが推奨されます。</td>
-            <td><a href="/function_pages/function_pages/rand_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>realloc関数の詳細情報</td>
-            <td>void* realloc(void* ptr, size_t new_size);</td>
-            <td>realloc関数は、指定されたポインタで指し示されるメモリブロックのサイズを新しいサイズに変更します。新しいサイズが元のサイズより大きい場合、追加のメモリが割り当てられます。新しいサイズが元のサイズより小さい場合、余分なメモリは解放されます。この関数は新しいメモリブロックへのポインタを返します。</td>
-            <td><a href="/function_pages/function_pages/realloc_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>scanf関数の詳細情報</td>
-            <td>int scanf(const char* format, ...);</td>
-            <td>scanf関数は、標準入力からフォーマットされたデータを読み取り、指定された変数に格納します。この関数は正常に読み取った入力項目の数を返します。</td>
-            <td><a href="/function_pages/function_pages/scanf_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>setenv関数の詳細情報</td>
-            <td>int setenv(const char *name, const char *value, int overwrite);</td>
-            <td>setenv関数は、指定された名前の環境変数を新しい値に設定します。もし環境変数が既に存在していて、overwriteが0でなければ、値は上書きされます。成功時に0を、エラーが発生した場合には-1を返します。</td>
-            <td><a href="/function_pages/function_pages/setenv_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>setlocale関数の詳細情報</td>
-            <td>char *setlocale(int category, const char *locale);</td>
-            <td>setlocale関数は、プログラムのロケールを設定またはクエリします。categoryパラメータは設定するロケールのカテゴリを指定し、localeパラメータは使用するロケールの名前を指定します。成功時には使用されているロケールの名前を、エラーが発生した場合にはNULLを返します。</td>
-            <td><a href="/function_pages/function_pages/setlocale_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>sin関数の詳細情報</td>
-            <td>double sin(double x);</td>
-            <td>sin関数は、引数として与えられた数値の正弦（サイン）を計算します。引数はラジアン単位で渡す必要があります。</td>
-            <td><a href="/function_pages/function_pages/sin_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>sleep関数の詳細情報</td>
-            <td>unsigned int sleep(unsigned int seconds);</td>
-            <td>sleep関数はプログラムの実行を指定された秒数だけ一時停止させます。関数は実際にスリープした秒数を返します。</td>
-            <td><a href="/function_pages/function_pages/sleep_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>sqrt関数の詳細情報</td>
-            <td>double sqrt(double x);</td>
-            <td>sqrt関数は引数として与えられた数値の平方根を計算して返します。引数は非負の値でなければなりません。</td>
-            <td><a href="/function_pages/function_pages/sqrt_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>srand関数の詳細情報</td>
-            <td>void srand(unsigned int seed);</td>
-            <td>srand関数は、乱数生成器のシード値を設定します。同じシード値を使用すると、rand関数によって生成される乱数列は同じになります。</td>
-            <td><a href="/function_pages/function_pages/srand_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>strcat関数の詳細情報</td>
-            <td>char *strcat(char *dest, const char *src);</td>
-            <td>strcat関数は、第二引数のsrcで指定された文字列を第一引数のdestで指定された文字列の末尾に結合します。戻り値は結合された文字列へのポインタです。</td>
-            <td><a href="/function_pages/function_pages/strcat_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>strchr関数の詳細情報</td>
-            <td>char *strchr(const char *str, int c);</td>
-            <td>strchr関数は、第一引数のstrで指定された文字列内で、第二引数のcで指定された文字を検索します。見つかった場合はその文字へのポインタを返し、見つからなかった場合はNULLを返します。</td>
-            <td><a href="/function_pages/function_pages/strchr_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>
-   strncmp関数の詳細情報
-  </td>
-            <td></td>
-            <td></td>
-            <td><a href="/function_pages/function_pages/strcmp_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>strcpy関数の詳細情報</td>
-            <td>char *strcpy(char *dest, const char *src);</td>
-            <td>strcpy関数は、srcで指定された文字列をdestにコピーします。コピーされた文字列の終端にはヌル文字('\0')が追加されます。</td>
-            <td><a href="/function_pages/function_pages/strcpy_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>strerror関数の詳細情報</td>
-            <td>char *strerror(int errnum);</td>
-            <td>strerror関数は、エラー番号errnumに対応するエラーメッセージを返します。この関数は、エラー処理で使用されます。</td>
-            <td><a href="/function_pages/function_pages/strerror_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>strlen関数の詳細情報</td>
-            <td>size_t strlen(const char *s);</td>
-            <td>strlen関数は、null終端文字列sの長さを返します（null終端文字を含まない）。</td>
-            <td><a href="/function_pages/function_pages/strlen_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>strncat関数の詳細情報</td>
-            <td>char *strncat(char *dest, const char *src, size_t n);</td>
-            <td>strncat関数は、src文字列の最初のn文字をdest文字列の終端に追加します。結果としてできる文字列はnullで終わります。</td>
-            <td><a href="/function_pages/function_pages/strncat_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>strncmp関数の詳細情報</td>
-            <td>int strncmp(const char *s1, const char *s2, size_t n);</td>
-            <td>strncmp関数は、s1とs2の最初のn文字を比較し、比較の結果に基づいて整数を返します。s1がs2より辞書的に小さい場合は負の整数、等しい場合は0、大きい場合は正の整数を返します。</td>
-            <td><a href="/function_pages/function_pages/strncmp_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>strncpy関数の詳細情報</td>
-            <td>char *strncpy(char *dest, const char *src, size_t n);</td>
-            <td>strncpy関数は、srcの最初のn文字をdestにコピーします。もしsrcがn文字に満たない場合、残りの部分はnull文字で埋められます。</td>
-            <td><a href="/function_pages/function_pages/strncpy_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>strrchr関数の詳細情報</td>
-            <td>char *strrchr(const char *str, int c);</td>
-            <td>strrchr関数は、strの中で文字cが最後に出現する位置を探します。見つかった場合は、その位置へのポインタを返します。もし見つからない場合はNULLを返します。</td>
-            <td><a href="/function_pages/function_pages/strrchr_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>system関数の詳細情報</td>
-            <td>int system(const char *command);</td>
-            <td>system関数は、指定されたコマンドラインをホスト環境のシェルまたはコマンドラインインタープリタに渡して実行します。コマンドの実行が成功した場合はコマンドの終了ステータスを返し、エラーが発生した場合は-1を返します。</td>
-            <td><a href="/function_pages/function_pages/system_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>tan関数の詳細情報</td>
-            <td>double tan(double x);</td>
-            <td>tan関数は、引数として与えられた角度（ラジアン単位）の正接（タンジェント）を計算して返します。</td>
-            <td><a href="/function_pages/function_pages/tan_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>time関数の詳細情報</td>
-            <td>time_t time(time_t *t);</td>
-            <td>time関数は、現在のカレンダータイム（エポックからの経過秒数）を返します。オプションで、結果を引数として渡された変数にも格納できます。</td>
-            <td><a href="/function_pages/function_pages/time_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>tolower関数の詳細情報</td>
-            <td>int tolower(int c);</td>
-            <td>tolower関数は、引数として与えられた文字が大文字の場合にそれを小文字に変換します。変換された文字、または引数が大文字でない場合は引数をそのまま返します。</td>
-            <td><a href="/function_pages/function_pages/tolower_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>toupper関数の詳細情報</td>
-            <td>int toupper(int c);</td>
-            <td>toupper関数は、引数として与えられた文字が小文字の場合にそれを大文字に変換します。変換された文字、または引数が小文字でない場合は引数をそのまま返します。</td>
-            <td><a href="/function_pages/function_pages/toupper_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>unsetenv関数の詳細情報</td>
-            <td>int unsetenv(const char *name);</td>
-            <td>unsetenv関数は、指定された名前の環境変数を削除します。成功した場合は0を、エラーが発生した場合は-1を返します。</td>
-            <td><a href="/function_pages/function_pages/unsetenv_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>waitpid関数の詳細情報</td>
-            <td>pid_t waitpid(pid_t pid, int *status, int options);</td>
-            <td>waitpid関数は、指定されたpidの子プロセスの終了を待ちます。optionsを使用して挙動を変更できます。子プロセスが終了すると、そのプロセスIDが返され、statusポインタが終了情報で更新されます。</td>
-            <td><a href="/function_pages/function_pages/waitpid_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>wait関数の詳細情報</td>
-            <td>pid_t wait(int *status);</td>
-            <td>wait関数は、呼び出し元のプロセスが子プロセスの終了を待ちます。子プロセスが終了すると、そのプロセスIDが返され、statusポインタが終了情報で更新されます。</td>
-            <td><a href="/function_pages/function_pages/wait_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-        <tr>
-            <td>_Exit関数の詳細情報</td>
-            <td>void _Exit(int status);</td>
-            <td>_Exit関数は、終了ステータスを引数として受け取り、プログラムを即座に終了させます。終了ステータスは、親プロセスに返されます。</td>
-            <td><a href="/function_pages/function_pages/_Exit_Å┌ì╫Åεò±.html" target="_blank">HTMLファイル</a></td>
-        </tr>
-    
-    </table>
+    <h2>関数図鑑</h2>
+    <table border="0" class="dataframe table table-striped">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>大カテゴリ</th>
+      <th>小カテゴリ</th>
+      <th>関数名</th>
+      <th>プロトタイプ</th>
+      <th>説明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th></th>
+      <td>入出力</td>
+      <td>基本入出力</td>
+      <td>getchar</td>
+      <td>int getchar(void);</td>
+      <td>1文字を標準入力から読み取る</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>gets</td>
+      <td>char *gets(char *str); (非推奨)</td>
+      <td>一行を標準入力から読み取る</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>scanf</td>
+      <td>int scanf(const char *format, ...);</td>
+      <td>フォーマットされた入力を読み取る</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td>ファイル入出力</td>
+      <td>fscanf</td>
+      <td>int fscanf(FILE *stream, const char *format, ...);</td>
+      <td>ファイルからフォーマットされた入力を読み取る</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>fgets</td>
+      <td>char *fgets(char *str, int n, FILE *stream);</td>
+      <td>ファイルまたは標準入力から一行読み取る</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>putchar</td>
+      <td>int putchar(int char);</td>
+      <td>1文字を標準出力に書き出す</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>puts</td>
+      <td>int puts(const char *str);</td>
+      <td>一行を標準出力に書き出す</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>printf</td>
+      <td>int printf(const char *format, ...);</td>
+      <td>フォーマットされた出力を行う</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>fprintf</td>
+      <td>int fprintf(FILE *stream, const char *format, ...);</td>
+      <td>ファイルにフォーマットされた出力を行う</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>fputs</td>
+      <td>int fputs(const char *str, FILE *stream);</td>
+      <td>ファイルまたは標準出力に一行書き出す</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>文字列・文字</td>
+      <td>文字列操作</td>
+      <td>strcpy</td>
+      <td>char *strcpy(char *dest, const char *src);</td>
+      <td>文字列をコピー</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>strcat</td>
+      <td>char *strcat(char *dest, const char *src);</td>
+      <td>文字列を結合</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>strlen</td>
+      <td>size_t strlen(const char *s);</td>
+      <td>文字列の長さを取得</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>strcmp</td>
+      <td>int strcmp(const char *s1, const char *s2);</td>
+      <td>文字列の比較</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>strncpy</td>
+      <td>char *strncpy(char *dest, const char *src, size_t n);</td>
+      <td>文字列をn文字分コピー</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>strncat</td>
+      <td>char *strncat(char *dest, const char *src, size_t n);</td>
+      <td>文字列をn文字分結合</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>strncmp</td>
+      <td>int strncmp(const char *s1, const char *s2, size_t n);</td>
+      <td>文字列をn文字分比較</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>strchr</td>
+      <td>char *strchr(const char *s, int c);</td>
+      <td>文字を検索</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>strrchr</td>
+      <td>char *strrchr(const char *s, int c);</td>
+      <td>文字を後ろから検索</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td>文字操作</td>
+      <td>isdigit</td>
+      <td>int isdigit(int c);</td>
+      <td>数字かどうか判定</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>isalpha</td>
+      <td>int isalpha(int c);</td>
+      <td>アルファベットかどうか判定</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>isupper</td>
+      <td>int isupper(int c);</td>
+      <td>大文字かどうか判定</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>islower</td>
+      <td>int islower(int c);</td>
+      <td>小文字かどうか判定</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>toupper</td>
+      <td>int toupper(int c);</td>
+      <td>大文字に変換</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>tolower</td>
+      <td>int tolower(int c);</td>
+      <td>小文字に変換</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td>文字列変換</td>
+      <td>atoi</td>
+      <td>int atoi(const char *str);</td>
+      <td>文字列をintに変換</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>atol</td>
+      <td>long atol(const char *str);</td>
+      <td>文字列をlongに変換</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>atof</td>
+      <td>double atof(const char *str);</td>
+      <td>文字列をdoubleに変換</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>itoa</td>
+      <td>char *itoa(int value, char *str, int base);</td>
+      <td>intを文字列に変換 (非標準)</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>数学関数</td>
+      <td>三角関数</td>
+      <td>sin</td>
+      <td>double sin(double x);</td>
+      <td>xの正弦を計算する。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>cos</td>
+      <td>double cos(double x);</td>
+      <td>xの余弦を計算する。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>tan</td>
+      <td>double tan(double x);</td>
+      <td>xの正接を計算する。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td>対数関数</td>
+      <td>log</td>
+      <td>double log(double x);</td>
+      <td>xの自然対数（底e）を計算する。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>log10</td>
+      <td>double log10(double x);</td>
+      <td>xの常用対数（底10）を計算する。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td>指数関数</td>
+      <td>exp</td>
+      <td>double exp(double x);</td>
+      <td>eのx乗を計算する。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td>乗算関数</td>
+      <td>pow</td>
+      <td>double pow(double base, double exp);</td>
+      <td>baseのexp乗を計算する。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td>平方根関数</td>
+      <td>sqrt</td>
+      <td>double sqrt(double x);</td>
+      <td>xの平方根を計算する。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td>丸め関数</td>
+      <td>floor</td>
+      <td>double floor(double x);</td>
+      <td>x以下の最大の整数を返す。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>ceil</td>
+      <td>double ceil(double x);</td>
+      <td>x以上の最小の整数を返す。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>時間・日付</td>
+      <td>時刻取得</td>
+      <td>time</td>
+      <td>time_t time(time_t *timer);</td>
+      <td>現在の時刻を取得する。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>clock</td>
+      <td>clock_t clock(void);</td>
+      <td>プログラムの開始からのクロック数を取得する。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td>時間変換</td>
+      <td>mktime</td>
+      <td>time_t mktime(struct tm *timeptr);</td>
+      <td>struct tmをtime_tに変換する。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td>時間フォーマット</td>
+      <td>asctime</td>
+      <td>char *asctime(const struct tm *timeptr);</td>
+      <td>struct tmを文字列に変換する。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>ctime</td>
+      <td>char *ctime(const time_t *timer);</td>
+      <td>time_tを文字列に変換する。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td>時間比較</td>
+      <td>difftime</td>
+      <td>double difftime(time_t time1, time_t time0);</td>
+      <td>二つのtime_t値の差を秒単位で計算する。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td>時間構造体</td>
+      <td>gmtime</td>
+      <td>struct tm *gmtime(const time_t *timer);</td>
+      <td>time_tを協定世界時(UTC)のstruct tmに変換する。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>localtime</td>
+      <td>struct tm *localtime(const time_t *timer);</td>
+      <td>time_tをローカル時刻のstruct tmに変換する。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td>時間操作</td>
+      <td>sleep</td>
+      <td>unsigned int sleep(unsigned int seconds);</td>
+      <td>指定された秒数だけプログラムの実行を遅延させる。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>メモリ管理</td>
+      <td>動的確保</td>
+      <td>malloc</td>
+      <td>void *malloc(size_t size);</td>
+      <td>指定されたバイト数のメモリを確保する。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>calloc</td>
+      <td>void *calloc(size_t nmemb, size_t size);</td>
+      <td>指定されたバイト数のメモリを確保し、0で初期化する。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>realloc</td>
+      <td>void *realloc(void *ptr, size_t size);</td>
+      <td>既存のメモリブロックのサイズを変更する。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td>動的解放</td>
+      <td>free</td>
+      <td>void free(void *ptr);</td>
+      <td>動的に確保されたメモリを解放する。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td>アライメント</td>
+      <td>aligned_alloc</td>
+      <td>void *aligned_alloc(size_t alignment, size_t size);</td>
+      <td>指定されたアライメントでメモリを確保する。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>環境操作</td>
+      <td>システムコール</td>
+      <td>system</td>
+      <td>int system(const char *command);</td>
+      <td>システムシェルでコマンドを実行する。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td>環境変数取得</td>
+      <td>getenv</td>
+      <td>char *getenv(const char *name);</td>
+      <td>環境変数の値を取得する。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td>環境変数設定</td>
+      <td>setenv</td>
+      <td>int setenv(const char *name, const char *value, int overwrite);</td>
+      <td>環境変数を設定する。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td>環境変数削除</td>
+      <td>unsetenv</td>
+      <td>int unsetenv(const char *name);</td>
+      <td>環境変数を削除する。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td>プログラム終了</td>
+      <td>exit</td>
+      <td>void exit(int status);</td>
+      <td>プログラムを終了し、終了ステータスを返す。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>abort</td>
+      <td>void abort(void);</td>
+      <td>プログラムを異常終了させる。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td>終了処理登録</td>
+      <td>atexit</td>
+      <td>int atexit(void (*func)(void));</td>
+      <td>プログラム終了時に実行する関数を登録する。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>プロセス制御</td>
+      <td>プログラム終了</td>
+      <td>exit</td>
+      <td>void exit(int status);</td>
+      <td>プログラムを終了し、終了ステータスを返す。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>_Exit</td>
+      <td>void _Exit(int status);</td>
+      <td>プログラムを終了し、終了ステータスを返す（バッファをフラッシュしない）。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>abort</td>
+      <td>void abort(void);</td>
+      <td>プログラムを異常終了させる。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td>プロセス作成</td>
+      <td>fork</td>
+      <td>pid_t fork(void);</td>
+      <td>新しいプロセス（子プロセス）を作成する。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>exec</td>
+      <td>int execve(const char *filename, char *const argv[], char *const envp[]);</td>
+      <td>新しいプログラムを実行する。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td>プロセス待機</td>
+      <td>wait</td>
+      <td>pid_t wait(int *wstatus);</td>
+      <td>子プロセスの終了を待つ。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>waitpid</td>
+      <td>pid_t waitpid(pid_t pid, int *wstatus, int options);</td>
+      <td>指定した子プロセスの終了を待つ。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>エラー処理</td>
+      <td>エラーメッセージ</td>
+      <td>perror</td>
+      <td>void perror(const char *str);</td>
+      <td>エラーメッセージを表示する。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>strerror</td>
+      <td>char *strerror(int errnum);</td>
+      <td>エラー番号に対応するエラーメッセージを返す。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td>エラー番号取得</td>
+      <td>errno</td>
+      <td>int errno;</td>
+      <td>最後に発生したエラーのエラー番号を保持する変数。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td>終了処理</td>
+      <td>exit</td>
+      <td>void exit(int status);</td>
+      <td>プログラムを終了し、終了ステータスを返す。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td>abort</td>
+      <td>void abort(void);</td>
+      <td>プログラムを異常終了させる。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td>アサート</td>
+      <td>assert</td>
+      <td>void assert(int expression);</td>
+      <td>条件が偽である場合、プログラムを異常終了させる。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>ランダム数生成</td>
+      <td>乱数生成</td>
+      <td>rand</td>
+      <td>int rand(void);</td>
+      <td>乱数を生成する。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td>乱数シード設定</td>
+      <td>srand</td>
+      <td>void srand(unsigned int seed);</td>
+      <td>乱数生成器のシード値を設定する。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>ロケール操作</td>
+      <td>ロケール設定</td>
+      <td>setlocale</td>
+      <td>char *setlocale(int category, const char *locale);</td>
+      <td>ロケールを設定または取得する。</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td>ロケール情報取得</td>
+      <td>localeconv</td>
+      <td>struct lconv *localeconv(void);</td>
+      <td>ロケール固有の書式情報を提供する構造体を取得する。</td>
+    </tr>
+  </tbody>
+</table>
 </body>
 </html>
