@@ -3,17 +3,60 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>関数図鑑</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
+        body { font-family: Arial, sans-serif; margin: 0; }
+        #sidebar { width: 170px; position: fixed; height: 100%; overflow: auto; }
+        #main-content { margin-left: 170px; padding: 1px 16px; }
         table { border-collapse: collapse; width: 100%; }
         th, td { border: 1px solid #dddddd; text-align: left; padding: 8px; }
         th { background-color: #f2f2f2; }
     </style>
 </head>
 <body>
+  <div id="sidebar">
+    
+    <h2>カテゴリ</h2>
+    <ul>
+        <li><a href="#入出力">入出力</a></li>
+        <!-- 他のカテゴリリンクも同様に追加 -->
+    </ul>
+    <ul>
+      <li><a href="#文字列・文字">文字列・文字</a></li>
+      <!-- 他のカテゴリリンクも同様に追加 -->
+  </ul>
+  <ul>
+    <li><a href="#数学関数">数学関数</a></li>
+    <!-- 他のカテゴリリンクも同様に追加 -->
+</ul>
+<ul>
+  <li><a href="#メモリ管理">メモリ管理</a></li>
+  <!-- 他のカテゴリリンクも同様に追加 -->
+</ul>
+<ul>
+  <li><a href="#環境操作">環境操作</a></li>
+  <!-- 他のカテゴリリンクも同様に追加 -->
+</ul>
+<ul>
+  <li><a href="#プロセス制御">プロセス制御</a></li>
+  <!-- 他のカテゴリリンクも同様に追加 -->
+</ul>
+<ul>
+  <li><a href="#エラー処理">エラー処理</a></li>
+  <!-- 他のカテゴリリンクも同様に追加 -->
+</ul>
+<ul>
+  <li><a href="#ランダム数生成">ランダム数生成</a></li>
+  <!-- 他のカテゴリリンクも同様に追加 -->
+</ul>
+<ul>
+  <li><a href="#ロケール操作">ロケール操作</a></li>
+  <!-- 他のカテゴリリンクも同様に追加 -->
+</ul>
+</div>
+
+<div id="main-content">
     <h2>関数図鑑</h2>
     <table border="0" class="dataframe table table-striped">
   <thead>
@@ -29,7 +72,7 @@
   <tbody>
     <tr>
       <th></th>
-      <td>入出力</td>
+      <td id="入出力">入出力</td>
       <td>基本入出力</td>
       <td>getchar</td>
       <td>int getchar(void);</td>
@@ -87,7 +130,7 @@
       <th></th>
       <td></td>
       <td></td>
-      <td>printf</td>
+      <td><a href="https://example.com/printf">printf</a></td>
       <td>int printf(const char *format, ...);</td>
       <td>フォーマットされた出力を行う</td>
     </tr>
@@ -108,8 +151,9 @@
       <td>ファイルまたは標準出力に一行書き出す</td>
     </tr>
     <tr>
+      
       <th></th>
-      <td>文字列・文字</td>
+      <td id="文字列・文字">文字列・文字</td>
       <td>文字列操作</td>
       <td>strcpy</td>
       <td>char *strcpy(char *dest, const char *src);</td>
@@ -269,7 +313,7 @@
     </tr>
     <tr>
       <th></th>
-      <td>数学関数</td>
+      <td id="数学関数">数学関数</td>
       <td>三角関数</td>
       <td>sin</td>
       <td>double sin(double x);</td>
@@ -421,7 +465,7 @@
     </tr>
     <tr>
       <th></th>
-      <td>メモリ管理</td>
+      <td id="メモリ管理">メモリ管理</td>
       <td>動的確保</td>
       <td>malloc</td>
       <td>void *malloc(size_t size);</td>
@@ -461,7 +505,7 @@
     </tr>
     <tr>
       <th></th>
-      <td>環境操作</td>
+      <td id="環境操作">環境操作</td>
       <td>システムコール</td>
       <td>system</td>
       <td>int system(const char *command);</td>
@@ -517,7 +561,7 @@
     </tr>
     <tr>
       <th></th>
-      <td>プロセス制御</td>
+      <td id="プロセス制御">プロセス制御</td>
       <td>プログラム終了</td>
       <td>exit</td>
       <td>void exit(int status);</td>
@@ -573,7 +617,7 @@
     </tr>
     <tr>
       <th></th>
-      <td>エラー処理</td>
+      <td id="エラー処理">エラー処理</td>
       <td>エラーメッセージ</td>
       <td>perror</td>
       <td>void perror(const char *str);</td>
@@ -621,7 +665,7 @@
     </tr>
     <tr>
       <th></th>
-      <td>ランダム数生成</td>
+      <td id="ランダム数生成">ランダム数生成</td>
       <td>乱数生成</td>
       <td>rand</td>
       <td>int rand(void);</td>
@@ -637,7 +681,7 @@
     </tr>
     <tr>
       <th></th>
-      <td>ロケール操作</td>
+      <td id="ロケール操作">ロケール操作</td>
       <td>ロケール設定</td>
       <td>setlocale</td>
       <td>char *setlocale(int category, const char *locale);</td>
@@ -653,5 +697,6 @@
     </tr>
   </tbody>
 </table>
+</div>
 </body>
 </html>
