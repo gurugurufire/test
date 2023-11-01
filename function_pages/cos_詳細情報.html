@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>cos関数の詳細情報</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1, h2 { color: #333366; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>cos</h1>
+    <h2>プロトタイプ</h2>
+    <p>double cos(double x);</p>
+    <h2>詳細説明</h2>
+    <p>cos関数は、引数として与えられた角度（ラジアン単位）の余弦（コサイン）を計算します。この関数は&lt;math.h&gt;ヘッダーに定義されています。</p>
+    <h2>使用例</h2>
+    <h3>コード</h3>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+int main() {
+    double angle = M_PI / 3; // ラジアンで60度
+    printf("cos(%lf) = %lf\n", angle, cos(angle));
+    return 0;
+}
+    </pre>
+    <h3>出力</h3>
+    <pre>
+cos(1.047198) = 0.500000
+    </pre>
+</body>
+</html>

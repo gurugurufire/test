@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>strcpy関数の詳細情報</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1, h2 { color: #333366; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>strcpy</h1>
+    <h2>プロトタイプ</h2>
+    <p>char *strcpy(char *dest, const char *src);</p>
+    <h2>詳細説明</h2>
+    <p>strcpy関数は、srcで指定された文字列をdestにコピーします。コピーされた文字列の終端にはヌル文字('\0')が追加されます。</p>
+    <h2>使用例</h2>
+    <h3>コード</h3>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main() {
+    char src[] = "Hello World";
+    char dest[20];
+    strcpy(dest, src);
+    printf("コピーされた文字列: %s\n", dest);
+    return 0;
+}
+    </pre>
+    <h3>出力</h3>
+    <pre>
+コピーされた文字列: Hello World
+    </pre>
+</body>
+</html>

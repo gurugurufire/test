@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>setlocale関数の詳細情報</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1, h2 { color: #333366; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>setlocale</h1>
+    <h2>プロトタイプ</h2>
+    <p>char *setlocale(int category, const char *locale);</p>
+    <h2>詳細説明</h2>
+    <p>setlocale関数は、プログラムのロケールを設定またはクエリします。categoryパラメータは設定するロケールのカテゴリを指定し、localeパラメータは使用するロケールの名前を指定します。成功時には使用されているロケールの名前を、エラーが発生した場合にはNULLを返します。</p>
+    <h2>使用例</h2>
+    <h3>コード</h3>
+    <pre>
+#include &lt;locale.h&gt;
+#include &lt;stdio.h&gt;
+
+int main() {
+    char *result = setlocale(LC_ALL, "en_US.UTF-8");
+    if (result == NULL) {
+        printf("Locale not changed\n");
+    } else {
+        printf("Locale set to %s\n", result);
+    }
+    return 0;
+}
+    </pre>
+    <h3>出力</h3>
+    <pre>Locale set to en_US.UTF-8</pre>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>malloc関数の詳細情報</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1, h2 { color: #333366; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>malloc</h1>
+    <h2>プロトタイプ</h2>
+    <p>void* malloc(size_t size);</p>
+    <h2>詳細説明</h2>
+    <p>malloc関数は、指定されたバイト数のメモリを割り当て、そのメモリブロックへのポインタを返します。この関数は<stdlib.h>ヘッダーファイルに定義されています。</p>
+    <h2>使用例</h2>
+    <h3>コード</h3>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main() {
+    int *arr;
+    arr = (int*)malloc(10 * sizeof(int));
+    if(arr == NULL) {
+        printf("Memory allocation failed\n");
+    } else {
+        printf("Memory allocation successful\n");
+    }
+    free(arr);
+    return 0;
+}
+    </pre>
+    <h3>出力</h3>
+    <pre>Memory allocation successful</pre>
+</body>
+</html>

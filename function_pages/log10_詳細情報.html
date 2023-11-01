@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>log10関数の詳細情報</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1, h2 { color: #333366; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>log10</h1>
+    <h2>プロトタイプ</h2>
+    <p>double log10(double x);</p>
+    <h2>詳細説明</h2>
+    <p>log10関数は、引数として与えられた実数値xの常用対数（底は10）を計算して返します。この関数は<math.h>ヘッダーファイルに定義されています。</p>
+    <h2>使用例</h2>
+    <h3>コード</h3>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+int main() {
+    double number = 1000.0;
+    double result = log10(number);
+    printf("log10(%lf) = %lf\n", number, result);
+    return 0;
+}
+    </pre>
+    <h3>出力</h3>
+    <pre>log10(1000.000000) = 3.000000</pre>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>exec関数群の詳細情報</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1, h2 { color: #333366; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>exec関数群</h1>
+    <h2>プロトタイプ</h2>
+    <p>int execl(const char *path, const char *arg, ...);</p>
+    <p>int execlp(const char *file, const char *arg, ...);</p>
+    <p>int execle(const char *path, const char *arg, ..., char * const envp[]);</p>
+    <p>int execv(const char *path, char *const argv[]);</p>
+    <p>int execvp(const char *file, char *const argv[]);</p>
+    <p>int execvpe(const char *file, char *const argv[], char *const envp[]);</p>
+    <h2>詳細説明</h2>
+    <p>exec関数群は、現在のプロセスを新しいプログラムで置き換えるために使用されます。これらの関数は成功すると戻りません。失敗した場合には-1を返し、errnoがセットされます。</p>
+    <h2>使用例</h2>
+    <h3>コード</h3>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;unistd.h&gt;
+
+int main() {
+    char *args[] = {"ls", "-l", NULL};
+    execvp("ls", args);
+    
+    // execvpが成功した場合、以下のコードは実行されません。
+    printf("execvpに失敗しました\n");
+    return 0;
+}
+    </pre>
+    <h3>出力</h3>
+    <pre>
+実行結果はls -lコマンドの出力になります。
+    </pre>
+</body>
+</html>

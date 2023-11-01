@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>scanf関数の詳細情報</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1, h2 { color: #333366; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>scanf</h1>
+    <h2>プロトタイプ</h2>
+    <p>int scanf(const char* format, ...);</p>
+    <h2>詳細説明</h2>
+    <p>scanf関数は、標準入力からフォーマットされたデータを読み取り、指定された変数に格納します。この関数は正常に読み取った入力項目の数を返します。</p>
+    <h2>使用例</h2>
+    <h3>コード</h3>
+    <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int age;
+    float height;
+    printf("年齢と身長を入力してください: ");
+    scanf("%d %f", &age, &height);
+    printf("年齢: %d, 身長: %.2f", age, height);
+    return 0;
+}
+    </pre>
+    <h3>出力</h3>
+    <pre>年齢と身長を入力してください: （ユーザーの入力によって異なります）</pre>
+</body>
+</html>

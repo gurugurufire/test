@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>atol関数の詳細情報</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1, h2 { color: #333366; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>atol</h1>
+    <h2>プロトタイプ</h2>
+    <p>long atol(const char *str);</p>
+    <h2>詳細説明</h2>
+    <p>atol関数は、文字列をlong型の整数に変換します。変換できない場合は0を返します。</p>
+    <h2>使用例</h2>
+    <h3>コード</h3>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main() {
+    char str[] = "1234567890";
+    long num = atol(str);
+    printf("数値: %ld\n", num);
+    return 0;
+}
+    </pre>
+    <h3>出力</h3>
+    <pre>
+数値: 1234567890
+    </pre>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>getenv関数の詳細情報</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1, h2 { color: #333366; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>getenv</h1>
+    <h2>プロトタイプ</h2>
+    <p>char *getenv(const char *name);</p>
+    <h2>詳細説明</h2>
+    <p>getenv関数は、引数で指定された名前の環境変数の値を返します。環境変数が存在しない場合はNULLを返します。</p>
+    <h2>使用例</h2>
+    <h3>コード</h3>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main() {
+    const char *env_var = getenv("PATH");
+    if(env_var != NULL) {
+        printf("PATH: %s\n", env_var);
+    } else {
+        printf("PATH環境変数が見つかりませんでした。\n");
+    }
+    return 0;
+}
+    </pre>
+    <h3>出力</h3>
+    <pre>PATH: [システムのPATH環境変数の値]</pre>
+</body>
+</html>

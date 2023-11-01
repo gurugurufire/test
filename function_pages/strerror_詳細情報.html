@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>strerror関数の詳細情報</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1, h2 { color: #333366; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>strerror</h1>
+    <h2>プロトタイプ</h2>
+    <p>char *strerror(int errnum);</p>
+    <h2>詳細説明</h2>
+    <p>strerror関数は、エラー番号errnumに対応するエラーメッセージを返します。この関数は、エラー処理で使用されます。</p>
+    <h2>使用例</h2>
+    <h3>コード</h3>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &lt;errno.h&gt;
+
+int main() {
+    FILE *fp = fopen("nonexistentfile.txt", "r");
+    if (fp == NULL) {
+        int errnum = errno;
+        printf("エラー発生: %s\n", strerror(errnum));
+    } else {
+        // ファイル操作
+        fclose(fp);
+    }
+    return 0;
+}
+    </pre>
+    <h3>出力</h3>
+    <pre>
+エラー発生: No such file or directory
+    </pre>
+</body>
+</html>

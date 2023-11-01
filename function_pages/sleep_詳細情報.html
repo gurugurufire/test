@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>sleep関数の詳細情報</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1, h2 { color: #333366; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>sleep</h1>
+    <h2>プロトタイプ</h2>
+    <p>unsigned int sleep(unsigned int seconds);</p>
+    <h2>詳細説明</h2>
+    <p>sleep関数はプログラムの実行を指定された秒数だけ一時停止させます。関数は実際にスリープした秒数を返します。</p>
+    <h2>使用例</h2>
+    <h3>コード</h3>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;unistd.h&gt;
+
+int main() {
+    printf("3秒間スリープします...\n");
+    sleep(3);
+    printf("目覚めました！\n");
+    return 0;
+}
+    </pre>
+    <h3>出力</h3>
+    <pre>
+3秒間スリープします...
+目覚めました！
+    </pre>
+</body>
+</html>

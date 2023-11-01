@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>strncpy関数の詳細情報</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1, h2 { color: #333366; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>strncpy</h1>
+    <h2>プロトタイプ</h2>
+    <p>char *strncpy(char *dest, const char *src, size_t n);</p>
+    <h2>詳細説明</h2>
+    <p>strncpy関数は、srcの最初のn文字をdestにコピーします。もしsrcがn文字に満たない場合、残りの部分はnull文字で埋められます。</p>
+    <h2>使用例</h2>
+    <h3>コード</h3>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main() {
+    char src[] = "Hello World";
+    char dest[6];
+    strncpy(dest, src, 5);
+    dest[5] = '\0'; // 終端のnull文字を追加
+    printf("コピーされた文字列: %s", dest);
+    return 0;
+}
+    </pre>
+    <h3>出力</h3>
+    <pre>
+コピーされた文字列: Hello
+    </pre>
+</body>
+</html>

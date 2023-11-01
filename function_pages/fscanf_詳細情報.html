@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>fscanf関数の詳細情報</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1, h2 { color: #333366; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>fscanf</h1>
+    <h2>プロトタイプ</h2>
+    <p>int fscanf(FILE *stream, const char *format, ...);</p>
+    <h2>詳細説明</h2>
+    <p>fscanf関数は、指定されたファイルストリームからフォーマットされたデータを読み取り、引数に従って変数に格納します。成功すると、読み取った項目の数を返します。失敗するとEOFを返します。</p>
+    <h2>使用例</h2>
+    <h3>コード</h3>
+    <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    FILE *fp = fopen("data.txt", "r");
+    if(fp == NULL) {
+        perror("ファイルを開けませんでした");
+        return -1;
+    }
+    
+    int num;
+    fscanf(fp, "%d", &num);
+    printf("ファイルから読み取った数値: %d\n", num);
+    
+    fclose(fp);
+    return 0;
+}
+    </pre>
+    <h3>出力</h3>
+    <pre>ファイルから読み取った数値: [ファイルに格納されている数値]</pre>
+</body>
+</html>

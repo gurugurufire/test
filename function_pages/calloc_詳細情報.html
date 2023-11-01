@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>calloc関数の詳細情報</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1, h2 { color: #333366; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>calloc</h1>
+    <h2>プロトタイプ</h2>
+    <p>void *calloc(size_t num, size_t size);</p>
+    <h2>詳細説明</h2>
+    <p>calloc関数は、指定された数の要素に対して動的にメモリを割り当て、割り当てられたメモリを0で初期化します。成功すると、割り当てられたメモリへのポインタを返し、失敗するとNULLを返します。</p>
+    <h2>使用例</h2>
+    <h3>コード</h3>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main() {
+    int* arr = (int*) calloc(5, sizeof(int));
+    if (arr != NULL) {
+        for (int i = 0; i < 5; i++) {
+            printf("%d ", arr[i]);
+        }
+        free(arr);
+    }
+    return 0;
+}
+    </pre>
+    <h3>出力</h3>
+    <pre>
+0 0 0 0 0 
+    </pre>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>exit関数の詳細情報</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1, h2 { color: #333366; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>exit</h1>
+    <h2>プロトタイプ</h2>
+    <p>void exit(int status);</p>
+    <h2>詳細説明</h2>
+    <p>exit関数は、プログラムの実行を終了し、制御をオペレーティングシステムに戻します。status引数は、プログラムの終了状態を表し、これはオペレーティングシステムや他のプログラムによって使用されることがあります。</p>
+    <h2>使用例</h2>
+    <h3>コード</h3>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main() {
+    printf("プログラムを終了します。\n");
+    exit(EXIT_SUCCESS); // プログラムを正常に終了
+}
+    </pre>
+    <h3>出力</h3>
+    <pre>
+プログラムを終了します。
+    </pre>
+</body>
+</html>

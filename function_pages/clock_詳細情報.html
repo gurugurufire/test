@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>clock関数の詳細情報</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1, h2 { color: #333366; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>clock</h1>
+    <h2>プロトタイプ</h2>
+    <p>clock_t clock(void);</p>
+    <h2>詳細説明</h2>
+    <p>clock関数は、プログラムの開始からの処理時間（CPU時間）を測定するために使用されます。この関数は&lt;time.h&gt;ヘッダーに定義されています。返り値はclock_t型で、時間を表す値です。</p>
+    <h2>使用例</h2>
+    <h3>コード</h3>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;time.h&gt;
+
+int main() {
+    clock_t start, end;
+    double cpu_time_used;
+    
+    start = clock();
+    // 何か時間のかかる処理
+    end = clock();
+    cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
+    
+    printf("処理時間: %f秒\n", cpu_time_used);
+    return 0;
+}
+    </pre>
+    <h3>出力</h3>
+    <pre>
+処理時間: x.xxxxxx秒
+    </pre>
+</body>
+</html>

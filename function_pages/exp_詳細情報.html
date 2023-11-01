@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>exp関数の詳細情報</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1, h2 { color: #333366; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>exp</h1>
+    <h2>プロトタイプ</h2>
+    <p>double exp(double x);</p>
+    <h2>詳細説明</h2>
+    <p>exp関数は、数学的なe（ネイピア数）のx乗を計算し、その結果を返します。</p>
+    <h2>使用例</h2>
+    <h3>コード</h3>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+int main() {
+    double x = 1.0;
+    double result = exp(x);
+    printf("eの%.2f乗は: %.2f\n", x, result);
+    return 0;
+}
+    </pre>
+    <h3>出力</h3>
+    <pre>
+eの1.00乗は: 2.72
+    </pre>
+</body>
+</html>

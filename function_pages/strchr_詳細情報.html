@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>strchr関数の詳細情報</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1, h2 { color: #333366; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>strchr</h1>
+    <h2>プロトタイプ</h2>
+    <p>char *strchr(const char *str, int c);</p>
+    <h2>詳細説明</h2>
+    <p>strchr関数は、第一引数のstrで指定された文字列内で、第二引数のcで指定された文字を検索します。見つかった場合はその文字へのポインタを返し、見つからなかった場合はNULLを返します。</p>
+    <h2>使用例</h2>
+    <h3>コード</h3>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main() {
+    const char *str = "Hello World";
+    char c = 'W';
+    char *result = strchr(str, c);
+    if(result != NULL) {
+        printf("文字 '%c' が見つかりました: %s\n", c, result);
+    } else {
+        printf("文字 '%c' は見つかりませんでした。\n", c);
+    }
+    return 0;
+}
+    </pre>
+    <h3>出力</h3>
+    <pre>
+文字 'W' が見つかりました: World
+    </pre>
+</body>
+</html>

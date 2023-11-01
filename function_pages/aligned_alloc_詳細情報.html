@@ -1,0 +1,25 @@
+<html>
+ <head>
+  <title>aligned_alloc関数の詳細情報</title>
+  <style>
+   body { font-family: Arial, sans-serif; }
+        h1, h2 { color: #333366; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
+  </style>
+ </head>
+ <body>
+  <h1>aligned_alloc</h1>
+  <h2>プロトタイプ</h2>
+  <p>void* aligned_alloc(size_t alignment, size_t size);</p>
+  <h2>詳細説明</h2>
+  <p>aligned_alloc関数は、指定されたアライメントで指定されたサイズのメモリブロックを割り当てる関数です。成功するとアライメントされたメモリブロックへのポインタを返し、失敗するとNULLを返します。</p>
+  <h2>使用例</h2>
+  <h3>コード</h3>
+  <pre>void* ptr = aligned_alloc(16, 100);  // 16バイトアライメントで100バイトのメモリを確保
+if (ptr) {
+    free(ptr);  // メモリを解放
+}</pre>
+  <h3>出力</h3>
+  <pre>メモリが正しく割り当てられれば、それを解放します。</pre>
+ </body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>strrchr関数の詳細情報</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1, h2 { color: #333366; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>strrchr</h1>
+    <h2>プロトタイプ</h2>
+    <p>char *strrchr(const char *str, int c);</p>
+    <h2>詳細説明</h2>
+    <p>strrchr関数は、strの中で文字cが最後に出現する位置を探します。見つかった場合は、その位置へのポインタを返します。もし見つからない場合はNULLを返します。</p>
+    <h2>使用例</h2>
+    <h3>コード</h3>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main() {
+    const char *str = "Hello World";
+    char *last_occurrence = strrchr(str, 'o');
+    if (last_occurrence != NULL) {
+        printf("最後の'o'の位置: %ld\n", last_occurrence - str);
+    } else {
+        printf("'o'は見つかりませんでした。\n");
+    }
+    return 0;
+}
+    </pre>
+    <h3>出力</h3>
+    <pre>
+最後の'o'の位置: 7
+    </pre>
+</body>
+</html>

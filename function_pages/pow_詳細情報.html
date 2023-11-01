@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>pow関数の詳細情報</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1, h2 { color: #333366; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>pow</h1>
+    <h2>プロトタイプ</h2>
+    <p>double pow(double base, double exponent);</p>
+    <h2>詳細説明</h2>
+    <p>pow関数は、指定された基数（base）の指定された指数（exponent）に対する累乗計算を行います。</p>
+    <h2>使用例</h2>
+    <h3>コード</h3>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+int main() {
+    double base = 2.0;
+    double exponent = 3.0;
+    double result = pow(base, exponent);
+    
+    printf("Result: %.2f", result);
+    return 0;
+}
+    </pre>
+    <h3>出力</h3>
+    <pre>Result: 8.00</pre>
+</body>
+</html>

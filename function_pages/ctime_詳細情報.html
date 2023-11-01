@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>ctime関数の詳細情報</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1, h2 { color: #333366; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>ctime</h1>
+    <h2>プロトタイプ</h2>
+    <p>char *ctime(const time_t *timer);</p>
+    <h2>詳細説明</h2>
+    <p>ctime関数は、time_t型の値を受け取り、それを読みやすい文字列の形式に変換します。この関数は&lt;time.h&gt;ヘッダーに定義されています。</p>
+    <h2>使用例</h2>
+    <h3>コード</h3>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;time.h&gt;
+
+int main() {
+    time_t rawtime;
+    time(&rawtime);
+    printf("現在の日時: %s", ctime(&rawtime));
+    return 0;
+}
+    </pre>
+    <h3>出力</h3>
+    <pre>
+現在の日時: Mon Jan 1 12:00:00 1970
+    </pre>
+</body>
+</html>

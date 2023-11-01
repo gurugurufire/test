@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>ceil関数の詳細情報</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1, h2 { color: #333366; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>ceil</h1>
+    <h2>プロトタイプ</h2>
+    <p>double ceil(double x);</p>
+    <h2>詳細説明</h2>
+    <p>ceil関数は、引数として与えられた浮動小数点数xを超えない最小の整数を返します。この関数は&lt;math.h&gt;ヘッダーに定義されています。</p>
+    <h2>使用例</h2>
+    <h3>コード</h3>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+int main() {
+    double num = 9.2;
+    printf("ceil(%lf) = %lf\n", num, ceil(num));
+    return 0;
+}
+    </pre>
+    <h3>出力</h3>
+    <pre>
+ceil(9.200000) = 10.000000
+    </pre>
+</body>
+</html>

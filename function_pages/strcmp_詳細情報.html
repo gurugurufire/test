@@ -1,0 +1,43 @@
+<html>
+ <head>
+  <title>
+   strncmp関数の詳細情報
+  </title>
+  <style>
+   body { font-family: Arial, sans-serif; }
+        h1, h2 { color: #333366; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
+  </style>
+ </head>
+ <body>
+  <h1>
+   strncmp
+  </h1>
+  <h2>
+   プロトタイプ
+  </h2>
+  <p>
+   int strncmp(const char *str1, const char *str2, size_t n);
+  </p>
+  <h2>
+   詳細説明
+  </h2>
+  <p>
+   strncmp関数は、2つの文字列str1とstr2を比較し、最大n文字まで比較します。返り値は、str1がstr2よりも辞書的に前にくる場合は負の整数、等しい場合は0、str1がstr2よりも辞書的に後ろにくる場合は正の整数を返します。
+  </p>
+  <h2>
+   使用例
+  </h2>
+  <h3>
+   コード
+  </h3>
+  <pre>char str1[] = "apple";
+char str2[] = "banana";
+int result = strncmp(str1, str2, 5);
+printf("結果: %d", result);</pre>
+  <h3>
+   出力
+  </h3>
+  <pre>結果: -1 (str1がstr2よりも辞書的に前にくる場合)</pre>
+ </body>
+</html>

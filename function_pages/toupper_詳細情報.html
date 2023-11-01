@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>toupper関数の詳細情報</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1, h2 { color: #333366; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>toupper</h1>
+    <h2>プロトタイプ</h2>
+    <p>int toupper(int c);</p>
+    <h2>詳細説明</h2>
+    <p>toupper関数は、引数として与えられた文字が小文字の場合にそれを大文字に変換します。変換された文字、または引数が小文字でない場合は引数をそのまま返します。</p>
+    <h2>使用例</h2>
+    <h3>コード</h3>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;ctype.h&gt;
+
+int main() {
+    char ch = 'a';
+    int upperCh = toupper(ch);
+    printf("小文字: %c, 大文字: %c\n", ch, upperCh);
+    return 0;
+}
+    </pre>
+    <h3>出力</h3>
+    <pre>
+小文字: a, 大文字: A
+    </pre>
+</body>
+</html>

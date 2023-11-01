@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>fprintf関数の詳細情報</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1, h2 { color: #333366; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>fprintf</h1>
+    <h2>プロトタイプ</h2>
+    <p>int fprintf(FILE *stream, const char *format, ...);</p>
+    <h2>詳細説明</h2>
+    <p>
+        fprintf関数は、指定されたストリームに対して書式付きの出力を行います。第一引数は出力先のストリーム、第二引数は書式文字列を指定します。
+        その後の引数は、書式文字列内の書式指定子に対応する変数を順に指定します。
+    </p>
+    <h2>使用例</h2>
+    <h3>コード</h3>
+    <pre>
+        FILE *fp = fopen("output.txt", "w");
+        if (fp) {
+            fprintf(fp, "Hello, %s!", "World");
+            fclose(fp);
+        }
+    </pre>
+    <h3>出力</h3>
+    <pre>
+        // output.txtファイルの内容:
+        Hello, World!
+    </pre>
+</body>
+</html>

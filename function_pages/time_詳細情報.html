@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>time関数の詳細情報</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1, h2 { color: #333366; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>time</h1>
+    <h2>プロトタイプ</h2>
+    <p>time_t time(time_t *t);</p>
+    <h2>詳細説明</h2>
+    <p>time関数は、現在のカレンダータイム（エポックからの経過秒数）を返します。オプションで、結果を引数として渡された変数にも格納できます。</p>
+    <h2>使用例</h2>
+    <h3>コード</h3>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;time.h&gt;
+
+int main() {
+    time_t now = time(NULL);
+    printf("現在のタイムスタンプ: %ld\n", now);
+    return 0;
+}
+    </pre>
+    <h3>出力</h3>
+    <pre>
+現在のタイムスタンプ: 1635012345
+    </pre>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>fgets関数の詳細情報</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1, h2 { color: #333366; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>fgets</h1>
+    <h2>プロトタイプ</h2>
+    <p>char *fgets(char *str, int n, FILE *stream);</p>
+    <h2>詳細説明</h2>
+    <p>fgets関数は、指定されたファイルストリームから文字列を読み込み、それをstrで指定された文字列に格納します。nは読み込む最大文字数を指定し、ファイルの終端に達するか改行文字を読み込むまで文字を読み込みます。成功した場合はstrを返し、失敗した場合はNULLを返します。</p>
+    <h2>使用例</h2>
+    <h3>コード</h3>
+    <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    char buffer[100];
+    printf("文字列を入力してください: ");
+    fgets(buffer, 100, stdin);
+    printf("入力された文字列: %s", buffer);
+    return 0;
+}
+    </pre>
+    <h3>出力</h3>
+    <pre>
+文字列を入力してください: こんにちは
+入力された文字列: こんにちは
+    </pre>
+</body>
+</html>

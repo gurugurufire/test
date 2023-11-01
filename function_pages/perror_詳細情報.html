@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>perror関数の詳細情報</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1, h2 { color: #333366; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>perror</h1>
+    <h2>プロトタイプ</h2>
+    <p>void perror(const char *str);</p>
+    <h2>詳細説明</h2>
+    <p>perror関数は、errno変数に設定された最後のエラーコードに対応するエラーメッセージを標準エラー出力に出力します。オプションで、エラーメッセージの前に追加の文字列を出力するためにstrを指定することができます。</p>
+    <h2>使用例</h2>
+    <h3>コード</h3>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;errno.h&gt;
+#include &lt;string.h&gt;
+
+int main() {
+    FILE *fptr;
+
+    fptr = fopen("nonexistentfile.txt", "r");
+    if (fptr == NULL) {
+        perror("Error");
+    }
+    return 0;
+}
+    </pre>
+    <h3>出力</h3>
+    <pre>Error: No such file or directory</pre>
+</body>
+</html>

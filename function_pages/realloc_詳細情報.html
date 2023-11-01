@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>realloc関数の詳細情報</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1, h2 { color: #333366; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>realloc</h1>
+    <h2>プロトタイプ</h2>
+    <p>void* realloc(void* ptr, size_t new_size);</p>
+    <h2>詳細説明</h2>
+    <p>realloc関数は、指定されたポインタで指し示されるメモリブロックのサイズを新しいサイズに変更します。新しいサイズが元のサイズより大きい場合、追加のメモリが割り当てられます。新しいサイズが元のサイズより小さい場合、余分なメモリは解放されます。この関数は新しいメモリブロックへのポインタを返します。</p>
+    <h2>使用例</h2>
+    <h3>コード</h3>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main() {
+    int* ptr = malloc(10 * sizeof(int));  // 10個分のintサイズのメモリを割り当てる
+    if (ptr == NULL) {
+        perror("malloc");
+        return 1;
+    }
+
+    // メモリのサイズを20個分のintサイズに変更する
+    ptr = realloc(ptr, 20 * sizeof(int));
+    if (ptr == NULL) {
+        perror("realloc");
+        return 1;
+    }
+
+    // 使用後のメモリを解放する
+    free(ptr);
+    return 0;
+}
+    </pre>
+    <h3>出力</h3>
+    <pre>（実行結果によって異なります）</pre>
+</body>
+</html>

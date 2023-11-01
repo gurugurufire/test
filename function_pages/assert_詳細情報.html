@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>assert関数の詳細情報</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1, h2 { color: #333366; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>assert</h1>
+    <h2>プロトタイプ</h2>
+    <p>void assert(int expression);</p>
+    <h2>詳細説明</h2>
+    <p>assertマクロは、指定された式が真であることを確認します。式が偽である場合、assertはエラーメッセージを表示し、プログラムを異常終了させます。</p>
+    <h2>使用例</h2>
+    <h3>コード</h3>
+    <pre>
+#include &lt;assert.h&gt;
+#include &lt;stdio.h&gt;
+
+int main() {
+    int a = 5;
+    assert(a == 5);  // This will pass
+    assert(a == 10);  // This will fail and abort the program
+    
+    return 0;
+}
+    </pre>
+    <h3>出力</h3>
+    <pre>
+Assertion failed: (a == 10), function main, file main.c, line 7.
+    </pre>
+</body>
+</html>

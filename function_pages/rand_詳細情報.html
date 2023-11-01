@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>rand関数の詳細情報</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1, h2 { color: #333366; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>rand</h1>
+    <h2>プロトタイプ</h2>
+    <p>int rand(void);</p>
+    <h2>詳細説明</h2>
+    <p>rand関数は、疑似乱数を生成して0からRAND_MAXまでの範囲の整数を返します。より予測不可能な乱数列を生成するために、srand関数で乱数生成器をシードすることが推奨されます。</p>
+    <h2>使用例</h2>
+    <h3>コード</h3>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;time.h&gt;
+
+int main() {
+    srand(time(NULL));  // 乱数生成器のシード
+    int random_number = rand();  // 乱数の生成
+    printf("生成された乱数: %d", random_number);
+    return 0;
+}
+    </pre>
+    <h3>出力</h3>
+    <pre>生成された乱数: [ランダムな数値]</pre>
+</body>
+</html>

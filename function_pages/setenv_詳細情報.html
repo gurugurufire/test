@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>setenv関数の詳細情報</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1, h2 { color: #333366; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>setenv</h1>
+    <h2>プロトタイプ</h2>
+    <p>int setenv(const char *name, const char *value, int overwrite);</p>
+    <h2>詳細説明</h2>
+    <p>setenv関数は、指定された名前の環境変数を新しい値に設定します。もし環境変数が既に存在していて、overwriteが0でなければ、値は上書きされます。成功時に0を、エラーが発生した場合には-1を返します。</p>
+    <h2>使用例</h2>
+    <h3>コード</h3>
+    <pre>
+#include &lt;stdlib.h&gt;
+#include &lt;stdio.h&gt;
+
+int main() {
+    if (setenv("MY_VAR", "123", 1) != 0) {
+        perror("setenv failed");
+    } else {
+        printf("MY_VAR set to %s\n", getenv("MY_VAR"));
+    }
+    return 0;
+}
+    </pre>
+    <h3>出力</h3>
+    <pre>MY_VAR set to 123</pre>
+</body>
+</html>

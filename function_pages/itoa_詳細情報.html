@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>itoa関数の詳細情報</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1, h2 { color: #333366; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>itoa</h1>
+    <h2>プロトタイプ</h2>
+    <p>char* itoa(int value, char* str, int base);</p>
+    <h2>詳細説明</h2>
+    <p>itoa関数は、整数を文字列に変換します。第一引数は変換したい整数、第二引数は結果の文字列を格納するためのバッファ、第三引数は数値の基数です。</p>
+    <h2>使用例</h2>
+    <h3>コード</h3>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main() {
+    int number = 123;
+    char buffer[10];
+
+    itoa(number, buffer, 10);
+    printf("整数 %d の文字列は %s です。\n", number, buffer);
+
+    return 0;
+}
+    </pre>
+    <h3>出力</h3>
+    <pre>整数 123 の文字列は 123 です。</pre>
+</body>
+</html>
