@@ -1,11 +1,12 @@
 
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>関数図鑑</title>
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>関数図鑑</title>
+<style>
         body { font-family: Arial, sans-serif; margin: 0; }
         #sidebar { width: 170px; position: fixed; height: 100%; overflow: auto; }
         #main-content { margin-left: 170px; padding: 1px 16px; }
@@ -15,687 +16,684 @@
     </style>
 </head>
 <body>
-  <div id="sidebar">
-    
-    <h2>カテゴリ</h2>
-    <ul>
-        <li><a href="#入出力">入出力</a></li>
-        <!-- 他のカテゴリリンクも同様に追加 -->
-    </ul>
-    <ul>
-      <li><a href="#文字列・文字">文字列・文字</a></li>
-      <!-- 他のカテゴリリンクも同様に追加 -->
-  </ul>
-  <ul>
-    <li><a href="#数学関数">数学関数</a></li>
-    <!-- 他のカテゴリリンクも同様に追加 -->
+<div id="sidebar">
+<h2>カテゴリ</h2>
+<ul>
+<li><a href="#入出力">入出力</a></li>
+<!-- 他のカテゴリリンクも同様に追加 -->
 </ul>
 <ul>
-  <li><a href="#メモリ管理">メモリ管理</a></li>
-  <!-- 他のカテゴリリンクも同様に追加 -->
+<li><a href="#文字列・文字">文字列・文字</a></li>
+<!-- 他のカテゴリリンクも同様に追加 -->
 </ul>
 <ul>
-  <li><a href="#環境操作">環境操作</a></li>
-  <!-- 他のカテゴリリンクも同様に追加 -->
+<li><a href="#数学関数">数学関数</a></li>
+<!-- 他のカテゴリリンクも同様に追加 -->
 </ul>
 <ul>
-  <li><a href="#プロセス制御">プロセス制御</a></li>
-  <!-- 他のカテゴリリンクも同様に追加 -->
+<li><a href="#メモリ管理">メモリ管理</a></li>
+<!-- 他のカテゴリリンクも同様に追加 -->
 </ul>
 <ul>
-  <li><a href="#エラー処理">エラー処理</a></li>
-  <!-- 他のカテゴリリンクも同様に追加 -->
+<li><a href="#環境操作">環境操作</a></li>
+<!-- 他のカテゴリリンクも同様に追加 -->
 </ul>
 <ul>
-  <li><a href="#ランダム数生成">ランダム数生成</a></li>
-  <!-- 他のカテゴリリンクも同様に追加 -->
+<li><a href="#プロセス制御">プロセス制御</a></li>
+<!-- 他のカテゴリリンクも同様に追加 -->
 </ul>
 <ul>
-  <li><a href="#ロケール操作">ロケール操作</a></li>
-  <!-- 他のカテゴリリンクも同様に追加 -->
+<li><a href="#エラー処理">エラー処理</a></li>
+<!-- 他のカテゴリリンクも同様に追加 -->
+</ul>
+<ul>
+<li><a href="#ランダム数生成">ランダム数生成</a></li>
+<!-- 他のカテゴリリンクも同様に追加 -->
+</ul>
+<ul>
+<li><a href="#ロケール操作">ロケール操作</a></li>
+<!-- 他のカテゴリリンクも同様に追加 -->
 </ul>
 </div>
-
 <div id="main-content">
-    <h2>関数図鑑</h2>
-    <table border="0" class="dataframe table table-striped">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>大カテゴリ</th>
-      <th>小カテゴリ</th>
-      <th>関数名</th>
-      <th>プロトタイプ</th>
-      <th>説明</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th></th>
-      <td id="入出力">入出力</td>
-      <td>基本入出力</td>
-      <td>getchar</td>
-      <td>int getchar(void);</td>
-      <td>1文字を標準入力から読み取る</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>gets</td>
-      <td>char *gets(char *str); (非推奨)</td>
-      <td>一行を標準入力から読み取る</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>scanf</td>
-      <td>int scanf(const char *format, ...);</td>
-      <td>フォーマットされた入力を読み取る</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td>ファイル入出力</td>
-      <td>fscanf</td>
-      <td>int fscanf(FILE *stream, const char *format, ...);</td>
-      <td>ファイルからフォーマットされた入力を読み取る</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>fgets</td>
-      <td>char *fgets(char *str, int n, FILE *stream);</td>
-      <td>ファイルまたは標準入力から一行読み取る</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>putchar</td>
-      <td>int putchar(int char);</td>
-      <td>1文字を標準出力に書き出す</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>puts</td>
-      <td>int puts(const char *str);</td>
-      <td>一行を標準出力に書き出す</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td><a href="printf_詳細情報.html">printf</a></td>
-      <td>int printf(const char *format, ...);</td>
-      <td>フォーマットされた出力を行う</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>fprintf</td>
-      <td>int fprintf(FILE *stream, const char *format, ...);</td>
-      <td>ファイルにフォーマットされた出力を行う</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>fputs</td>
-      <td>int fputs(const char *str, FILE *stream);</td>
-      <td>ファイルまたは標準出力に一行書き出す</td>
-    </tr>
-    <tr>
-      
-      <th></th>
-      <td id="文字列・文字">文字列・文字</td>
-      <td>文字列操作</td>
-      <td>strcpy</td>
-      <td>char *strcpy(char *dest, const char *src);</td>
-      <td>文字列をコピー</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>strcat</td>
-      <td>char *strcat(char *dest, const char *src);</td>
-      <td>文字列を結合</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>strlen</td>
-      <td>size_t strlen(const char *s);</td>
-      <td>文字列の長さを取得</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>strcmp</td>
-      <td>int strcmp(const char *s1, const char *s2);</td>
-      <td>文字列の比較</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>strncpy</td>
-      <td>char *strncpy(char *dest, const char *src, size_t n);</td>
-      <td>文字列をn文字分コピー</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>strncat</td>
-      <td>char *strncat(char *dest, const char *src, size_t n);</td>
-      <td>文字列をn文字分結合</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>strncmp</td>
-      <td>int strncmp(const char *s1, const char *s2, size_t n);</td>
-      <td>文字列をn文字分比較</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>strchr</td>
-      <td>char *strchr(const char *s, int c);</td>
-      <td>文字を検索</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>strrchr</td>
-      <td>char *strrchr(const char *s, int c);</td>
-      <td>文字を後ろから検索</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td>文字操作</td>
-      <td>isdigit</td>
-      <td>int isdigit(int c);</td>
-      <td>数字かどうか判定</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>isalpha</td>
-      <td>int isalpha(int c);</td>
-      <td>アルファベットかどうか判定</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>isupper</td>
-      <td>int isupper(int c);</td>
-      <td>大文字かどうか判定</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>islower</td>
-      <td>int islower(int c);</td>
-      <td>小文字かどうか判定</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>toupper</td>
-      <td>int toupper(int c);</td>
-      <td>大文字に変換</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>tolower</td>
-      <td>int tolower(int c);</td>
-      <td>小文字に変換</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td>文字列変換</td>
-      <td>atoi</td>
-      <td>int atoi(const char *str);</td>
-      <td>文字列をintに変換</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>atol</td>
-      <td>long atol(const char *str);</td>
-      <td>文字列をlongに変換</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>atof</td>
-      <td>double atof(const char *str);</td>
-      <td>文字列をdoubleに変換</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>itoa</td>
-      <td>char *itoa(int value, char *str, int base);</td>
-      <td>intを文字列に変換 (非標準)</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th></th>
-      <td id="数学関数">数学関数</td>
-      <td>三角関数</td>
-      <td>sin</td>
-      <td>double sin(double x);</td>
-      <td>xの正弦を計算する。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>cos</td>
-      <td>double cos(double x);</td>
-      <td>xの余弦を計算する。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>tan</td>
-      <td>double tan(double x);</td>
-      <td>xの正接を計算する。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td>対数関数</td>
-      <td>log</td>
-      <td>double log(double x);</td>
-      <td>xの自然対数（底e）を計算する。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>log10</td>
-      <td>double log10(double x);</td>
-      <td>xの常用対数（底10）を計算する。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td>指数関数</td>
-      <td>exp</td>
-      <td>double exp(double x);</td>
-      <td>eのx乗を計算する。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td>乗算関数</td>
-      <td>pow</td>
-      <td>double pow(double base, double exp);</td>
-      <td>baseのexp乗を計算する。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td>平方根関数</td>
-      <td>sqrt</td>
-      <td>double sqrt(double x);</td>
-      <td>xの平方根を計算する。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td>丸め関数</td>
-      <td>floor</td>
-      <td>double floor(double x);</td>
-      <td>x以下の最大の整数を返す。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>ceil</td>
-      <td>double ceil(double x);</td>
-      <td>x以上の最小の整数を返す。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td>時間・日付</td>
-      <td>時刻取得</td>
-      <td>time</td>
-      <td>time_t time(time_t *timer);</td>
-      <td>現在の時刻を取得する。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>clock</td>
-      <td>clock_t clock(void);</td>
-      <td>プログラムの開始からのクロック数を取得する。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td>時間変換</td>
-      <td>mktime</td>
-      <td>time_t mktime(struct tm *timeptr);</td>
-      <td>struct tmをtime_tに変換する。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td>時間フォーマット</td>
-      <td>asctime</td>
-      <td>char *asctime(const struct tm *timeptr);</td>
-      <td>struct tmを文字列に変換する。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>ctime</td>
-      <td>char *ctime(const time_t *timer);</td>
-      <td>time_tを文字列に変換する。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td>時間比較</td>
-      <td>difftime</td>
-      <td>double difftime(time_t time1, time_t time0);</td>
-      <td>二つのtime_t値の差を秒単位で計算する。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td>時間構造体</td>
-      <td>gmtime</td>
-      <td>struct tm *gmtime(const time_t *timer);</td>
-      <td>time_tを協定世界時(UTC)のstruct tmに変換する。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>localtime</td>
-      <td>struct tm *localtime(const time_t *timer);</td>
-      <td>time_tをローカル時刻のstruct tmに変換する。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td>時間操作</td>
-      <td>sleep</td>
-      <td>unsigned int sleep(unsigned int seconds);</td>
-      <td>指定された秒数だけプログラムの実行を遅延させる。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td id="メモリ管理">メモリ管理</td>
-      <td>動的確保</td>
-      <td>malloc</td>
-      <td>void *malloc(size_t size);</td>
-      <td>指定されたバイト数のメモリを確保する。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>calloc</td>
-      <td>void *calloc(size_t nmemb, size_t size);</td>
-      <td>指定されたバイト数のメモリを確保し、0で初期化する。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>realloc</td>
-      <td>void *realloc(void *ptr, size_t size);</td>
-      <td>既存のメモリブロックのサイズを変更する。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td>動的解放</td>
-      <td>free</td>
-      <td>void free(void *ptr);</td>
-      <td>動的に確保されたメモリを解放する。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td>アライメント</td>
-      <td>aligned_alloc</td>
-      <td>void *aligned_alloc(size_t alignment, size_t size);</td>
-      <td>指定されたアライメントでメモリを確保する。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td id="環境操作">環境操作</td>
-      <td>システムコール</td>
-      <td>system</td>
-      <td>int system(const char *command);</td>
-      <td>システムシェルでコマンドを実行する。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td>環境変数取得</td>
-      <td>getenv</td>
-      <td>char *getenv(const char *name);</td>
-      <td>環境変数の値を取得する。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td>環境変数設定</td>
-      <td>setenv</td>
-      <td>int setenv(const char *name, const char *value, int overwrite);</td>
-      <td>環境変数を設定する。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td>環境変数削除</td>
-      <td>unsetenv</td>
-      <td>int unsetenv(const char *name);</td>
-      <td>環境変数を削除する。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td>プログラム終了</td>
-      <td>exit</td>
-      <td>void exit(int status);</td>
-      <td>プログラムを終了し、終了ステータスを返す。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>abort</td>
-      <td>void abort(void);</td>
-      <td>プログラムを異常終了させる。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td>終了処理登録</td>
-      <td>atexit</td>
-      <td>int atexit(void (*func)(void));</td>
-      <td>プログラム終了時に実行する関数を登録する。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td id="プロセス制御">プロセス制御</td>
-      <td>プログラム終了</td>
-      <td>exit</td>
-      <td>void exit(int status);</td>
-      <td>プログラムを終了し、終了ステータスを返す。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>_Exit</td>
-      <td>void _Exit(int status);</td>
-      <td>プログラムを終了し、終了ステータスを返す（バッファをフラッシュしない）。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>abort</td>
-      <td>void abort(void);</td>
-      <td>プログラムを異常終了させる。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td>プロセス作成</td>
-      <td>fork</td>
-      <td>pid_t fork(void);</td>
-      <td>新しいプロセス（子プロセス）を作成する。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>exec</td>
-      <td>int execve(const char *filename, char *const argv[], char *const envp[]);</td>
-      <td>新しいプログラムを実行する。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td>プロセス待機</td>
-      <td>wait</td>
-      <td>pid_t wait(int *wstatus);</td>
-      <td>子プロセスの終了を待つ。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>waitpid</td>
-      <td>pid_t waitpid(pid_t pid, int *wstatus, int options);</td>
-      <td>指定した子プロセスの終了を待つ。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td id="エラー処理">エラー処理</td>
-      <td>エラーメッセージ</td>
-      <td>perror</td>
-      <td>void perror(const char *str);</td>
-      <td>エラーメッセージを表示する。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>strerror</td>
-      <td>char *strerror(int errnum);</td>
-      <td>エラー番号に対応するエラーメッセージを返す。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td>エラー番号取得</td>
-      <td>errno</td>
-      <td>int errno;</td>
-      <td>最後に発生したエラーのエラー番号を保持する変数。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td>終了処理</td>
-      <td>exit</td>
-      <td>void exit(int status);</td>
-      <td>プログラムを終了し、終了ステータスを返す。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td></td>
-      <td>abort</td>
-      <td>void abort(void);</td>
-      <td>プログラムを異常終了させる。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td>アサート</td>
-      <td>assert</td>
-      <td>void assert(int expression);</td>
-      <td>条件が偽である場合、プログラムを異常終了させる。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td id="ランダム数生成">ランダム数生成</td>
-      <td>乱数生成</td>
-      <td>rand</td>
-      <td>int rand(void);</td>
-      <td>乱数を生成する。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td>乱数シード設定</td>
-      <td>srand</td>
-      <td>void srand(unsigned int seed);</td>
-      <td>乱数生成器のシード値を設定する。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td id="ロケール操作">ロケール操作</td>
-      <td>ロケール設定</td>
-      <td>setlocale</td>
-      <td>char *setlocale(int category, const char *locale);</td>
-      <td>ロケールを設定または取得する。</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td></td>
-      <td>ロケール情報取得</td>
-      <td>localeconv</td>
-      <td>struct lconv *localeconv(void);</td>
-      <td>ロケール固有の書式情報を提供する構造体を取得する。</td>
-    </tr>
-  </tbody>
+<h2>関数図鑑</h2>
+<table border="0" class="dataframe table table-striped">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>大カテゴリ</th>
+<th>小カテゴリ</th>
+<th>関数名</th>
+<th>プロトタイプ</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th></th>
+<td id="入出力">入出力</td>
+<td>基本入出力</td>
+<td><a href="function_pages/getchar_詳細情報.html">getchar</a></td>
+<td>int getchar(void);</td>
+<td>1文字を標準入力から読み取る</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/gets_詳細情報.html">gets</a></td>
+<td>char *gets(char *str); (非推奨)</td>
+<td>一行を標準入力から読み取る</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/scanf_詳細情報.html">scanf</a></td>
+<td>int scanf(const char *format, ...);</td>
+<td>フォーマットされた入力を読み取る</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td>ファイル入出力</td>
+<td><a href="function_pages/fscanf_詳細情報.html">fscanf</a></td>
+<td>int fscanf(FILE *stream, const char *format, ...);</td>
+<td>ファイルからフォーマットされた入力を読み取る</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/fgets_詳細情報.html">fgets</a></td>
+<td>char *fgets(char *str, int n, FILE *stream);</td>
+<td>ファイルまたは標準入力から一行読み取る</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/putchar_詳細情報.html">putchar</a></td>
+<td>int putchar(int char);</td>
+<td>1文字を標準出力に書き出す</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/puts_詳細情報.html">puts</a></td>
+<td>int puts(const char *str);</td>
+<td>一行を標準出力に書き出す</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/printf_詳細情報.html">printf</a></td>
+<td>int printf(const char *format, ...);</td>
+<td>フォーマットされた出力を行う</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/fprintf_詳細情報.html">fprintf</a></td>
+<td>int fprintf(FILE *stream, const char *format, ...);</td>
+<td>ファイルにフォーマットされた出力を行う</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/fputs_詳細情報.html">fputs</a></td>
+<td>int fputs(const char *str, FILE *stream);</td>
+<td>ファイルまたは標準出力に一行書き出す</td>
+</tr>
+<tr>
+<th></th>
+<td id="文字列・文字">文字列・文字</td>
+<td>文字列操作</td>
+<td><a href="function_pages/strcpy_詳細情報.html">strcpy</a></td>
+<td>char *strcpy(char *dest, const char *src);</td>
+<td>文字列をコピー</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/strcat_詳細情報.html">strcat</a></td>
+<td>char *strcat(char *dest, const char *src);</td>
+<td>文字列を結合</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/strlen_詳細情報.html">strlen</a></td>
+<td>size_t strlen(const char *s);</td>
+<td>文字列の長さを取得</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/strcmp_詳細情報.html">strcmp</a></td>
+<td>int strcmp(const char *s1, const char *s2);</td>
+<td>文字列の比較</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/strncpy_詳細情報.html">strncpy</a></td>
+<td>char *strncpy(char *dest, const char *src, size_t n);</td>
+<td>文字列をn文字分コピー</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/strncat_詳細情報.html">strncat</a></td>
+<td>char *strncat(char *dest, const char *src, size_t n);</td>
+<td>文字列をn文字分結合</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/strncmp_詳細情報.html">strncmp</a></td>
+<td>int strncmp(const char *s1, const char *s2, size_t n);</td>
+<td>文字列をn文字分比較</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/strchr_詳細情報.html">strchr</a></td>
+<td>char *strchr(const char *s, int c);</td>
+<td>文字を検索</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/strrchr_詳細情報.html">strrchr</a></td>
+<td>char *strrchr(const char *s, int c);</td>
+<td>文字を後ろから検索</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td>文字操作</td>
+<td><a href="function_pages/isdigit_詳細情報.html">isdigit</a></td>
+<td>int isdigit(int c);</td>
+<td>数字かどうか判定</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/isalpha_詳細情報.html">isalpha</a></td>
+<td>int isalpha(int c);</td>
+<td>アルファベットかどうか判定</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/isupper_詳細情報.html">isupper</a></td>
+<td>int isupper(int c);</td>
+<td>大文字かどうか判定</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/islower_詳細情報.html">islower</a></td>
+<td>int islower(int c);</td>
+<td>小文字かどうか判定</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/toupper_詳細情報.html">toupper</a></td>
+<td>int toupper(int c);</td>
+<td>大文字に変換</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/tolower_詳細情報.html">tolower</a></td>
+<td>int tolower(int c);</td>
+<td>小文字に変換</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td>文字列変換</td>
+<td><a href="function_pages/atoi_詳細情報.html">atoi</a></td>
+<td>int atoi(const char *str);</td>
+<td>文字列をintに変換</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/atol_詳細情報.html">atol</a></td>
+<td>long atol(const char *str);</td>
+<td>文字列をlongに変換</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/atof_詳細情報.html">atof</a></td>
+<td>double atof(const char *str);</td>
+<td>文字列をdoubleに変換</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/itoa_詳細情報.html">itoa</a></td>
+<td>char *itoa(int value, char *str, int base);</td>
+<td>intを文字列に変換 (非標準)</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/_詳細情報.html"></a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th></th>
+<td id="数学関数">数学関数</td>
+<td>三角関数</td>
+<td><a href="function_pages/sin_詳細情報.html">sin</a></td>
+<td>double sin(double x);</td>
+<td>xの正弦を計算する。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/cos_詳細情報.html">cos</a></td>
+<td>double cos(double x);</td>
+<td>xの余弦を計算する。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/tan_詳細情報.html">tan</a></td>
+<td>double tan(double x);</td>
+<td>xの正接を計算する。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td>対数関数</td>
+<td><a href="function_pages/log_詳細情報.html">log</a></td>
+<td>double log(double x);</td>
+<td>xの自然対数（底e）を計算する。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/log10_詳細情報.html">log10</a></td>
+<td>double log10(double x);</td>
+<td>xの常用対数（底10）を計算する。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td>指数関数</td>
+<td><a href="function_pages/exp_詳細情報.html">exp</a></td>
+<td>double exp(double x);</td>
+<td>eのx乗を計算する。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td>乗算関数</td>
+<td><a href="function_pages/pow_詳細情報.html">pow</a></td>
+<td>double pow(double base, double exp);</td>
+<td>baseのexp乗を計算する。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td>平方根関数</td>
+<td><a href="function_pages/sqrt_詳細情報.html">sqrt</a></td>
+<td>double sqrt(double x);</td>
+<td>xの平方根を計算する。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td>丸め関数</td>
+<td><a href="function_pages/floor_詳細情報.html">floor</a></td>
+<td>double floor(double x);</td>
+<td>x以下の最大の整数を返す。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/ceil_詳細情報.html">ceil</a></td>
+<td>double ceil(double x);</td>
+<td>x以上の最小の整数を返す。</td>
+</tr>
+<tr>
+<th></th>
+<td>時間・日付</td>
+<td>時刻取得</td>
+<td><a href="function_pages/time_詳細情報.html">time</a></td>
+<td>time_t time(time_t *timer);</td>
+<td>現在の時刻を取得する。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/clock_詳細情報.html">clock</a></td>
+<td>clock_t clock(void);</td>
+<td>プログラムの開始からのクロック数を取得する。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td>時間変換</td>
+<td><a href="function_pages/mktime_詳細情報.html">mktime</a></td>
+<td>time_t mktime(struct tm *timeptr);</td>
+<td>struct tmをtime_tに変換する。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td>時間フォーマット</td>
+<td><a href="function_pages/asctime_詳細情報.html">asctime</a></td>
+<td>char *asctime(const struct tm *timeptr);</td>
+<td>struct tmを文字列に変換する。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/ctime_詳細情報.html">ctime</a></td>
+<td>char *ctime(const time_t *timer);</td>
+<td>time_tを文字列に変換する。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td>時間比較</td>
+<td><a href="function_pages/difftime_詳細情報.html">difftime</a></td>
+<td>double difftime(time_t time1, time_t time0);</td>
+<td>二つのtime_t値の差を秒単位で計算する。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td>時間構造体</td>
+<td><a href="function_pages/gmtime_詳細情報.html">gmtime</a></td>
+<td>struct tm *gmtime(const time_t *timer);</td>
+<td>time_tを協定世界時(UTC)のstruct tmに変換する。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/localtime_詳細情報.html">localtime</a></td>
+<td>struct tm *localtime(const time_t *timer);</td>
+<td>time_tをローカル時刻のstruct tmに変換する。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td>時間操作</td>
+<td><a href="function_pages/sleep_詳細情報.html">sleep</a></td>
+<td>unsigned int sleep(unsigned int seconds);</td>
+<td>指定された秒数だけプログラムの実行を遅延させる。</td>
+</tr>
+<tr>
+<th></th>
+<td id="メモリ管理">メモリ管理</td>
+<td>動的確保</td>
+<td><a href="function_pages/malloc_詳細情報.html">malloc</a></td>
+<td>void *malloc(size_t size);</td>
+<td>指定されたバイト数のメモリを確保する。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/calloc_詳細情報.html">calloc</a></td>
+<td>void *calloc(size_t nmemb, size_t size);</td>
+<td>指定されたバイト数のメモリを確保し、0で初期化する。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/realloc_詳細情報.html">realloc</a></td>
+<td>void *realloc(void *ptr, size_t size);</td>
+<td>既存のメモリブロックのサイズを変更する。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td>動的解放</td>
+<td><a href="function_pages/free_詳細情報.html">free</a></td>
+<td>void free(void *ptr);</td>
+<td>動的に確保されたメモリを解放する。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td>アライメント</td>
+<td><a href="function_pages/aligned_alloc_詳細情報.html">aligned_alloc</a></td>
+<td>void *aligned_alloc(size_t alignment, size_t size);</td>
+<td>指定されたアライメントでメモリを確保する。</td>
+</tr>
+<tr>
+<th></th>
+<td id="環境操作">環境操作</td>
+<td>システムコール</td>
+<td><a href="function_pages/system_詳細情報.html">system</a></td>
+<td>int system(const char *command);</td>
+<td>システムシェルでコマンドを実行する。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td>環境変数取得</td>
+<td><a href="function_pages/getenv_詳細情報.html">getenv</a></td>
+<td>char *getenv(const char *name);</td>
+<td>環境変数の値を取得する。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td>環境変数設定</td>
+<td><a href="function_pages/setenv_詳細情報.html">setenv</a></td>
+<td>int setenv(const char *name, const char *value, int overwrite);</td>
+<td>環境変数を設定する。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td>環境変数削除</td>
+<td><a href="function_pages/unsetenv_詳細情報.html">unsetenv</a></td>
+<td>int unsetenv(const char *name);</td>
+<td>環境変数を削除する。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td>プログラム終了</td>
+<td><a href="function_pages/exit_詳細情報.html">exit</a></td>
+<td>void exit(int status);</td>
+<td>プログラムを終了し、終了ステータスを返す。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/abort_詳細情報.html">abort</a></td>
+<td>void abort(void);</td>
+<td>プログラムを異常終了させる。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td>終了処理登録</td>
+<td><a href="function_pages/atexit_詳細情報.html">atexit</a></td>
+<td>int atexit(void (*func)(void));</td>
+<td>プログラム終了時に実行する関数を登録する。</td>
+</tr>
+<tr>
+<th></th>
+<td id="プロセス制御">プロセス制御</td>
+<td>プログラム終了</td>
+<td><a href="function_pages/exit_詳細情報.html">exit</a></td>
+<td>void exit(int status);</td>
+<td>プログラムを終了し、終了ステータスを返す。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/_Exit_詳細情報.html">_Exit</a></td>
+<td>void _Exit(int status);</td>
+<td>プログラムを終了し、終了ステータスを返す（バッファをフラッシュしない）。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/abort_詳細情報.html">abort</a></td>
+<td>void abort(void);</td>
+<td>プログラムを異常終了させる。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td>プロセス作成</td>
+<td><a href="function_pages/fork_詳細情報.html">fork</a></td>
+<td>pid_t fork(void);</td>
+<td>新しいプロセス（子プロセス）を作成する。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/exec_詳細情報.html">exec</a></td>
+<td>int execve(const char *filename, char *const argv[], char *const envp[]);</td>
+<td>新しいプログラムを実行する。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td>プロセス待機</td>
+<td><a href="function_pages/wait_詳細情報.html">wait</a></td>
+<td>pid_t wait(int *wstatus);</td>
+<td>子プロセスの終了を待つ。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/waitpid_詳細情報.html">waitpid</a></td>
+<td>pid_t waitpid(pid_t pid, int *wstatus, int options);</td>
+<td>指定した子プロセスの終了を待つ。</td>
+</tr>
+<tr>
+<th></th>
+<td id="エラー処理">エラー処理</td>
+<td>エラーメッセージ</td>
+<td><a href="function_pages/perror_詳細情報.html">perror</a></td>
+<td>void perror(const char *str);</td>
+<td>エラーメッセージを表示する。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/strerror_詳細情報.html">strerror</a></td>
+<td>char *strerror(int errnum);</td>
+<td>エラー番号に対応するエラーメッセージを返す。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td>エラー番号取得</td>
+<td><a href="function_pages/errno_詳細情報.html">errno</a></td>
+<td>int errno;</td>
+<td>最後に発生したエラーのエラー番号を保持する変数。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td>終了処理</td>
+<td><a href="function_pages/exit_詳細情報.html">exit</a></td>
+<td>void exit(int status);</td>
+<td>プログラムを終了し、終了ステータスを返す。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td><a href="function_pages/abort_詳細情報.html">abort</a></td>
+<td>void abort(void);</td>
+<td>プログラムを異常終了させる。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td>アサート</td>
+<td><a href="function_pages/assert_詳細情報.html">assert</a></td>
+<td>void assert(int expression);</td>
+<td>条件が偽である場合、プログラムを異常終了させる。</td>
+</tr>
+<tr>
+<th></th>
+<td id="ランダム数生成">ランダム数生成</td>
+<td>乱数生成</td>
+<td><a href="function_pages/rand_詳細情報.html">rand</a></td>
+<td>int rand(void);</td>
+<td>乱数を生成する。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td>乱数シード設定</td>
+<td><a href="function_pages/srand_詳細情報.html">srand</a></td>
+<td>void srand(unsigned int seed);</td>
+<td>乱数生成器のシード値を設定する。</td>
+</tr>
+<tr>
+<th></th>
+<td id="ロケール操作">ロケール操作</td>
+<td>ロケール設定</td>
+<td><a href="function_pages/setlocale_詳細情報.html">setlocale</a></td>
+<td>char *setlocale(int category, const char *locale);</td>
+<td>ロケールを設定または取得する。</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td>ロケール情報取得</td>
+<td><a href="function_pages/localeconv_詳細情報.html">localeconv</a></td>
+<td>struct lconv *localeconv(void);</td>
+<td>ロケール固有の書式情報を提供する構造体を取得する。</td>
+</tr>
+</tbody>
 </table>
 </div>
 </body>
